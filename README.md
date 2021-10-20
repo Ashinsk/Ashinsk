@@ -1,6 +1,4 @@
-Hi, I’m @Ashinsk.
-I’m interested in programming.
-I’m looking to collaborate on any project which will provide me a challenge.
+Hi, I’m @Ashinsk, a Computer Engineer from Nepal. I am a professional developer with 3 years of experience. I am open to collaboration in the fields of tech, development, artifiical intelligence and RnD.
 
 <!---
 Ashinsk/Ashinsk is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
