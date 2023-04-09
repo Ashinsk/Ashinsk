@@ -1,0 +1,23 @@
+.skill-img {
+    max-height: 50px;
+    max-width: 50px;
+}
+
+.social > img {
+    width: 2.5em;
+    height:2.5em;
+    margin: 5px;
+}
+
+.form {
+    width: 95% !important;
+}
+
+.chat {
+    font-family: 'Gill Sans, sans-seri';
+}
+
+a:link, a:visited, a:hover, a:active{
+    text-decoration: none;
+    color: gray;
+}
