@@ -1,3 +1,14 @@
+.dark-bg-gradient {
+    background: radial-gradient(circle at 10% 20%, rgb(69, 86, 102) 0%, rgb(34, 34, 34) 90%); 
+}
+
+a.nav-link, a.navbar-brand{
+    color: white!important;
+}
+a.nav-link:hover, .navbar-brand:hover {
+    color: gainsboro!important;
+}
+  
 .skill-img {
     max-height: 50px;
     max-width: 50px;
@@ -20,7 +31,11 @@
     justify-content: center;
 }
 
-a:link, a:visited, a:hover, a:active{
+a:link, a:visited, a:active{
     text-decoration: none;
+    color: white;
+}
+
+a:hover {
     color: gray;
 }
