@@ -14,7 +14,7 @@ a.nav-link:hover, .navbar-brand:hover {
     max-width: 50px;
 }
 
-.social > img {
+.social img {
     width: 2.5em;
     height:2.5em;
     margin: 5px;
