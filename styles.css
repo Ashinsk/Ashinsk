@@ -39,3 +39,28 @@ a:link, a:visited, a:active{
 a:hover {
     color: gray;
 }
+
+.fw-name {
+    font-size: 64px;
+    font-weight: 700;
+}
+
+.fw-name-aid {
+    font-weight: 10;
+}
+
+.social-links {
+    font-size: 30px;
+}
+
+.about-me, .experience {
+    line-height: 30px;
+}
+
+.dashboard-img {
+    background-image: url('images/images/dashboard.jpg');
+}
+
+.bg-gradient {
+    background: radial-gradient(circle at 10% 20%, rgb(24, 43, 62) 0%, rgb(19, 15, 15) 90%)!important;
+}
