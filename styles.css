@@ -64,3 +64,7 @@ a:hover {
 .bg-gradient {
     background: radial-gradient(circle at 10% 20%, rgb(24, 43, 62) 0%, rgb(19, 15, 15) 90%)!important;
 }
+
+.navbar-toggler{
+    background-color: #f2f2f2d6;
+}
