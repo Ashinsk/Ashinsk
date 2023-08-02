@@ -59,6 +59,8 @@ a:hover {
 
 .dashboard-img {
     background-image: url('images/images/dashboard.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .bg-gradient {
