@@ -1,5 +1,4 @@
-Hi 👋, I'm <b>Ashin Shakya</b><br/>
-A passionate software engineer from Nepal
+Hey 👋, I'm <b>Ashin Shakya</b><br/> and I am a passionate software engineer with 5 plus years of experience professionally with major skills in python programming language.
 
 You can reach me via
 
