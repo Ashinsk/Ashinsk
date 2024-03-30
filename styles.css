@@ -1,14 +1,18 @@
 .dark-bg-gradient {
-    background: radial-gradient(circle at 10% 20%, rgb(69, 86, 102) 0%, rgb(34, 34, 34) 90%); 
+    background: radial-gradient(circle at 10% 20%, rgb(69, 86, 102) 0%, rgb(34, 34, 34) 90%);
 }
 
-a.nav-link, a.navbar-brand, .navbar-toggler-icon{
-    color: white!important;
+a.nav-link,
+a.navbar-brand,
+.navbar-toggler-icon {
+    color: white !important;
 }
-a.nav-link:hover, .navbar-brand:hover {
-    color: gainsboro!important;
+
+a.nav-link:hover,
+.navbar-brand:hover {
+    color: gainsboro !important;
 }
-  
+
 .skill-img {
     max-height: 50px;
     max-width: 50px;
@@ -16,7 +20,7 @@ a.nav-link:hover, .navbar-brand:hover {
 
 .social img {
     width: 2.5em;
-    height:2.5em;
+    height: 2.5em;
     margin: 5px;
 }
 
@@ -31,7 +35,9 @@ a.nav-link:hover, .navbar-brand:hover {
     justify-content: center;
 }
 
-a:link, a:visited, a:active{
+a:link,
+a:visited,
+a:active {
     text-decoration: none;
     color: white;
 }
@@ -53,7 +59,8 @@ a:hover {
     font-size: 30px;
 }
 
-.about-me, .experience {
+.about-me,
+.experience {
     line-height: 30px;
 }
 
@@ -64,9 +71,27 @@ a:hover {
 }
 
 .bg-gradient {
-    background: radial-gradient(circle at 10% 20%, rgb(24, 43, 62) 0%, rgb(19, 15, 15) 90%)!important;
+    background: radial-gradient(circle at 10% 20%, rgb(24, 43, 62) 0%, rgb(19, 15, 15) 90%) !important;
 }
 
-.navbar-toggler{
+.navbar-toggler {
     background-color: #f2f2f2d6;
+}
+
+.post-date {
+    display: none;
+}
+
+.post-title>h2 {
+    color: black;
+}
+
+.excerpt {
+    height: 15em;
+}
+
+.git-repo {
+    margin: 10px;
+    max-height: 150px;
+    max-width: 150px;
 }
