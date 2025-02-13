@@ -6,7 +6,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <title>Ashin Portfolio</title>
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Ashin Shakya - Experienced Software Developer specializing in Python, Django, and PostgreSQL. Check out my projects and blog.">
+    <meta name="keywords" content="Ashin Shakya, Python Developer, Django Developer, Backend Engineer, Software Engineer, Web Development, PostgreSQL, Docker, CI/CD">
+
+    <title>Ashin Shakya | Software Developer | Python & Django Expert</title>
+    
+    <!-- Open Graph Meta Tags (For Facebook, LinkedIn, etc.) -->
+    <meta property="og:title" content="Ashin Shakya - Python & Django Developer">
+    <meta property="og:description" content="Experienced software developer specializing in Python, Django, and backend development.">
+    <meta property="og:image" content="https://ashinshakya.com.np/images/profile.jpg">
+    <meta property="og:url" content="https://ashinshakya.com.np">
+    <meta property="og:type" content="website">
+
+    <!-- Twitter Card Meta Tags (For Twitter) -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Ashin Shakya - Software Developer">
+    <meta name="twitter:description" content="Python and Django developer with expertise in backend development.">
+    <meta name="twitter:image" content="https://ashinshakya.com.np/images/profile.jpg">
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
@@ -15,12 +32,30 @@
 
     <link href="styles.css" rel="stylesheet">
 
+    <!-- Favicon (optional) -->
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
     <script type="text/javascript">
         (function (c, l, a, r, i, t, y) {
             c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments) };
             t = l.createElement(r); t.async = 1; t.src = "https://www.clarity.ms/tag/" + i;
             y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
         })(window, document, "clarity", "script", "ll8t200vke");
+    </script>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Ashin Shakya",
+        "jobTitle": "Software Developer",
+        "url": "https://ashinshakya.com.np",
+        "sameAs": [
+            "https://github.com/Ashinsk",
+            "https://www.linkedin.com/in/ashin-shakya",
+            "https://medium.com/@ashins1997"
+        ]
+    }
     </script>
 </head>
 
@@ -29,7 +64,9 @@
     <!-- Navbar Starts-->
     <nav class="navbar navbar-expand-lg fixed-top text-white bg-gradient">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">Ashin Shakya</a>
+            <a class="navbar-brand " href="#">
+                <h1 style="font-size:1.2rem;margin-bottom: 0;">Ashin Shakya</h1>
+            </a>
 
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
@@ -95,7 +132,6 @@
             <div class="row">
                 <div class="col-md-8 pt-5 text-center">
                     <div class="row align-items-start">
-                        <!-- <h1 class="mb-4">About Me</h1> -->
                         <div class="d-flex flex-column">
                             <div class="h4 p-1"><strong>Ashin Shakya</strong></div>
                             <div class="p-1"><strong>ashinsk489@gmail.com</strong></div>
@@ -173,7 +209,7 @@
 
                 <div class="col">
                     <div class="d-flex justify-content-center">
-                        <img src="images/images/profile1.jpg" class="img-fluid img-responsive" alt="Profile">
+                        <img src="images/images/profile1.jpg" class="img-fluid img-responsive" alt="Ashin Shakya - Python and Django Developer" loading="lazy">
                     </div>
                 </div>
             </div>
@@ -186,7 +222,7 @@
         <div class="container">
             <div class="row align-items-start">
                 <div class="col mb-5">
-                    <h1 class="mb-5">Experience</h1>
+                    <h2 class="mb-5">Experience</h2>
                     <div class="container">
                         <div class="mb-5">
                             <h5>Software Developer</h5>
@@ -234,7 +270,7 @@
         <div class="container">
             <div class="row align-items-start">
                 <div class="col mb-5">
-                    <h1 class="mb-2">Articles</h1>
+                    <h2 class="mb-2">Articles</h2>
                     <div id="retainable-rss-embed" data-rss="https://medium.com/feed/@ashins1997" data-maxcols="2"
                         data-layout="grid" data-poststyle="external" data-readmore="Read the rest"
                         data-buttonclass="btn btn-primary mt-2" data-offset="20">
@@ -250,10 +286,10 @@
         <div class="container">
             <div class="row align-items-start">
                 <div class="col mb-5">
-                    <h1 class="mb-5">
+                    <h2 class="mb-5">
                         <a href="https://github.com/Ashinsk" class="linkedin"><i class="bx bxl-github"></i></a>
                         Github Repos
-                    </h1>
+                    </h2>
 
                     <div class="row mb-5">
                         <div class="col-sm-6">
@@ -311,7 +347,7 @@
         <div class="container">
             <div class="row mb-5">
                 <div class="col-lg-6 col-md-12 mb-5">
-                    <h1 class="mb-5">Contact Me</h1>
+                    <h2 class="mb-5">Contact Me</h2>
                     <form class="form" id="my-form" method="POST" action="https://formspree.io/f/xayzdgew">
                         <div class="mb-3">
                             <label for="name" class="form-label">Name</label>
