@@ -95,3 +95,29 @@ a:hover {
     max-height: 150px;
     max-width: 150px;
 }
+
+.hover-bg:hover {
+    transition: background-color 0.3s ease;
+}
+
+.tech-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 1rem;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    height: 120px;
+    transition: transform 0.2s ease-in-out;
+}
+
+.tech-icon:hover {
+    transform: translateY(-4px);
+}
+
+.tech-icon img {
+    max-height: 40px;
+    margin-bottom: 0.5rem;
+}

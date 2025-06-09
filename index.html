@@ -67,7 +67,8 @@
     <!-- Navbar Starts-->
     <nav class="navbar navbar-expand-lg fixed-top text-white bg-gradient">
         <div class="container-fluid">
-            <a class="navbar-brand " href="#">
+            <a class="navbar-brand d-flex align-items-center gap-2" href="#">
+                <img src="images/images/profile1.jpg" alt="Ashin Shakya" class="rounded-circle" width="40" height="40">
                 <h1 style="font-size:1.2rem;margin-bottom: 0;">Ashin Shakya</h1>
             </a>
 
@@ -111,108 +112,77 @@
     <!-- Navbar Ends-->
 
     <!-- Landing Section Starts -->
-    <section class="text-white dashboard-img" id="home">
-        <div class="container text-center vh-100 position-relative">
-            <div class="position-absolute top-50 start-50 translate-middle">
-                <p class="h5 fw-name-aid">HEY! I AM</p>
-                <p class="h1 fw-name">ASHIN SHAKYA</p>
-                <p class="h5 fw-name-aid">I'M A PASSIONATE SOFTWARE DEVELOPER</p>
-                <div class="social-links">
-                    <a href="https://github.com/Ashinsk" class="linkedin"><i class="bx bxl-github"></i></a>
-                    <a href="https://www.linkedin.com/in/ashin-shakya" class="linkedin"><i
-                            class="bx bxl-linkedin"></i></a>
-                    <a href="https://medium.com/@ashins1997" class="linkedin"><i class="bx bxl-medium"></i></a>
-                    <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
-                </div>
+    <section class="text-white position-relative bg-cover dashboard-img" id="home">
+        <div class="container vh-100 d-flex flex-column justify-content-center align-items-center text-center">
+            <div class="mb-4">
+                <span class="h5 text-uppercase letter-spacing-sm text-light mb-2">Hey! I am</span>
+                <h1 class="display-4 fw-bold text-shadow">
+                    <span id="typed-name"></span>
+                </h1>
+                <span class="h5 text-uppercase letter-spacing-sm text-light">
+                    <span id="typed-role"></span>
+                </span>
+            </div>
+
+            <div class="d-flex gap-3 mt-3">
+                <a href="https://github.com/Ashinsk" target="_blank"
+                    class="btn btn-outline-light btn-lg rounded-circle d-flex align-items-center justify-content-center icon-hover"
+                    style="width: 50px; height: 50px;">
+                    <i class="bx bxl-github fs-4"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/ashin-shakya" target="_blank"
+                    class="btn btn-outline-light btn-lg rounded-circle d-flex align-items-center justify-content-center icon-hover"
+                    style="width: 50px; height: 50px;">
+                    <i class="bx bxl-linkedin fs-4"></i>
+                </a>
+                <a href="https://medium.com/@ashins1997" target="_blank"
+                    class="btn btn-outline-light btn-lg rounded-circle d-flex align-items-center justify-content-center icon-hover"
+                    style="width: 50px; height: 50px;">
+                    <i class="bx bxl-medium fs-4"></i>
+                </a>
+                <a href="#"
+                    class="btn btn-outline-light btn-lg rounded-circle d-flex align-items-center justify-content-center icon-hover"
+                    style="width: 50px; height: 50px;">
+                    <i class="bx bxl-skype fs-4"></i>
+                </a>
             </div>
         </div>
     </section>
     <!-- Landing Section Ends -->
 
+
     <!-- About Section Starts -->
     <section id="about" class="py-5">
         <div class="container">
             <div class="row">
-                <div class="col-md-8 pt-5 text-center">
-                    <div class="row align-items-start">
-                        <div class="d-flex flex-column">
-                            <div class="h4 p-1"><strong>Ashin Shakya</strong></div>
-                            <div class="p-1"><strong>ashinsk489@gmail.com</strong></div>
-                        </div>
-                        <p class="mt-4 mb-5 about-me">
-                            Hi, I'm a software developer with 4+ years of experience building web
-                            applications. I'm passionate about delivering efficient, scalable, and user-friendly
-                            software
-                            solutions. I'm excited about collaborating with others and staying up-to-date on emerging
-                            technologies to
-                            create innovative and impactful applications. Check out my portfolio to see some of my
-                            recent projects and get in touch if you'd like to discuss working together.
-                        </p>
-                    </div>
-
-                    <!-- Skills Section Start -->
-                    <div class="d-flex flex-wrap justify-content-center">
-                        <div class="skills rounded mx-2 my-2 flex-fill">
-                            <img class="skill-img img-fluid" src="images/skills/python.svg" alt="Python" title="Python"
-                                loading="lazy">
-                        </div>
-                        <div class="skills rounded mx-2 my-1 flex-fill">
-                            <img class="skill-img img-fluid" src="images/skills/django.svg" alt="Django" title="Django"
-                                loading="lazy">
-                        </div>
-                        <div class="skills rounded mx-2 my-1 flex-fill">
-                            <img class="skill-img img-fluid" src="images/skills/django_rest_framework.png"
-                                alt="DjangoRestFramework" title="DjangoRest" loading="lazy" style="max-width: 400px">
-                        </div>
-                        <div class="skills rounded mx-2 my-1 flex-fill">
-                            <img class="skill-img img-fluid" src="images/skills/html.png" alt="HTML" title="HTML"
-                                loading="lazy">
-                        </div>
-                        <div class="skills rounded mx-2 my-1 flex-fill">
-                            <img class="skill-img img-fluid" src="images/skills/css3.png" alt="CSS3" title="CSS3"
-                                loading="lazy">
-                        </div>
-
-                        <div class="skills rounded mx-2 my-1 flex-fill">
-                            <img class="skill-img img-fluid" src="images/skills/celery.svg" alt="Celery" title="Celery"
-                                loading="lazy">
-                        </div>
-                        <div class="skills rounded mx-2 my-1 flex-fill">
-                            <img class="skill-img img-fluid" src="images/skills/bootstrap.png" alt="Bootstrap"
-                                title="Bootstrap" loading="lazy">
-                        </div>
-                        <div class="skills rounded mx-2 my-1 flex-fill">
-                            <img class="skill-img img-fluid" src="images/skills/vue.png" alt="vue" title="vue"
-                                loading="lazy">
-                        </div>
-                        <div class="skills rounded mx-2 my-1 flex-fill">
-                            <img class="skill-img img-fluid" src="images/skills/nuxt.svg" alt="nuxt" title="Nuxt"
-                                loading="lazy" style="height: 50px">
-                        </div>
-                        <div class="skills rounded mx-2 my-1 flex-fill">
-                            <img class="skill-img img-fluid" src="images/skills/git.svg" alt="Git" title="Git"
-                                loading="lazy">
-                        </div>
-                        <div class="skills rounded mx-2 my-1 flex-fill">
-                            <img class="skill-img img-fluid" src="images/skills/docker.svg" alt="Docker" title="Docker"
-                                loading="lazy">
-                        </div>
-
-                        <div class="skills rounded mx-2 my-1 flex-fill">
-                            <img class="skill-img img-fluid" src="images/skills/postgres.png" alt="Postgres"
-                                title="Postgres" loading="lazy">
-                        </div>
-                        <div class="skills rounded mx-2 my-1 flex-fill">
-                            <img class="skill-img img-fluid" src="images/skills/mongodb.png" alt="MongoDB"
-                                title="MongoDB" loading="lazy" style="max-width: 200px;">
+                <!-- Left Column: About Me + Skills -->
+                <div class="col-md-8 pt-5 d-flex flex-column">
+                    <div class="card flex-fill p-4 shadow-lg border-0 rounded-4 bg-light text-dark">
+                        <div class="card-body">
+                            <div class="d-flex flex-column flex-md-row justify-content-between align-items-start">
+                                <div class="mb-3">
+                                    <h4 class="fw-bold mb-1">Ashin Shakya</h4>
+                                    <p class="mb-0 text-muted">ashinsk489@gmail.com</p>
+                                </div>
+                            </div>
+                            <p class="mt-3 mb-0 about-me">
+                                Hi, I'm a software developer with 6+ years of experience building web applications.
+                                I'm passionate about delivering efficient, scalable, and user-friendly software
+                                solutions.
+                                I'm excited about collaborating with others and staying up-to-date on emerging
+                                technologies to create
+                                innovative and impactful applications. Check out my portfolio to see some of my recent
+                                projects and get in
+                                touch if you'd like to discuss working together.
+                            </p>
                         </div>
                     </div>
-                    <!-- Skills Section End -->
                 </div>
 
-                <div class="col">
-                    <div class="d-flex justify-content-center">
-                        <img src="images/images/profile1.jpg" class="img-fluid img-responsive"
+                <!-- Right Column: Image -->
+                <div class="col-md-4 pt-5 d-flex align-items-stretch">
+                    <div class="w-100 card shadow-lg border-0 rounded-4 overflow-hidden">
+                        <img src="images/images/profile1.jpg" class="img-fluid w-100 h-100 object-fit-cover"
                             alt="Ashin Shakya - Python and Django Developer" loading="lazy">
                     </div>
                 </div>
@@ -229,8 +199,10 @@
                     <h2 class="mb-5">Experience</h2>
                     <div class="container">
                         <div class="mb-5">
-                            <h5>Software Developer</h5>
-                            <h6 class="mb-4"><i>Khalti Pvt Ltd (2021 - Present)</i></h6>
+                            <h5 class="card-title mb-1">Software Developer</h5>
+                            <h6 class="card-subtitle mb-3"><a href="https://khalti.com" class="text-info">Khalti Pvt
+                                    Ltd</a> <span class="text-white">| 2021 -
+                                    Present</span></h6>
                             <ul class="list-unstyled experience">
                                 <li>Collaborated with team of developers and designers to develop a new feature that
                                     improved the user experience.</li>
@@ -257,8 +229,10 @@
                             </div>
                         </div>
                         <div class="mb-5">
-                            <h5>Software Developer</h5>
-                            <h6 class="mb-4"><i>Pathway Technologies (2018 - 2021)</i></h6>
+                            <h5 class="card-title mb-1">Software Developer</h5>
+                            <h6 class="card-subtitle mb-3 text-info"><a href="http://ptas.com.np/"
+                                    class="text-info">Pathway Technologies</a> <span class="text-white">|
+                                    2018 - 2021</span></h6>
                             <ul class="list-unstyled experience">
                                 <li>Developed new web application using Python and the Django framework, working as the
                                     sole developer on the project.</li>
@@ -284,152 +258,461 @@
     </section>
     <!-- About Section Ends -->
 
-    <!-- Article Section Starts -->
-    <section id="articles" class="pt-5">
+    <section id="tools" class="pt-5 pb-5 bg-light">
         <div class="container">
             <div class="row align-items-start">
-                <div class="col mb-5">
-                    <h2 class="mb-2">Articles</h2>
-                    <div id="retainable-rss-embed" data-rss="https://medium.com/feed/@ashins1997" data-maxcols="2"
-                        data-layout="grid" data-poststyle="external" data-readmore="Read the rest"
-                        data-buttonclass="btn btn-primary mt-2" data-offset="20">
+                <div class="col">
+                    <h2>Tools</h2>
+                    <!-- Skills Section -->
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12 d-flex flex-column">
+                                <div class="p-4">
+                                    <!-- Frontend -->
+                                    <h4 class="mt-4">Frontend</h4>
+                                    <div class="row g-3">
+                                        <!-- HTML -->
+                                        <div class="col-6 col-md-3 col-lg-2">
+                                            <div class="tech-icon text-center">
+                                                <img src="images/skills/html.png" alt="HTML" title="HTML"
+                                                    loading="lazy">
+                                                <div>HTML</div>
+                                            </div>
+                                        </div>
+
+                                        <!-- CSS3 -->
+                                        <div class="col-6 col-md-3 col-lg-2">
+                                            <div class="tech-icon text-center">
+                                                <img src="images/skills/css3.png" alt="CSS3" title="CSS3"
+                                                    loading="lazy">
+                                                <div>CSS3</div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Bootstrap -->
+                                        <div class="col-6 col-md-3 col-lg-2">
+                                            <div class="tech-icon text-center">
+                                                <img src="images/skills/bootstrap.png" alt="Bootstrap" title="Bootstrap"
+                                                    loading="lazy">
+                                                <div>Bootstrap</div>
+                                            </div>
+                                        </div>
+
+                                        <!-- JavaScript -->
+                                        <div class="col-6 col-md-3 col-lg-2">
+                                            <div class="tech-icon text-center">
+                                                <img src="images/skills/javascript-icon.svg" alt="javascript"
+                                                    title="Javascript" loading="lazy" style="height: 50px;">
+                                                <div>Javascript</div>
+                                            </div>
+                                        </div>
+
+                                        <!-- TypeScript -->
+                                        <div class="col-6 col-md-3 col-lg-2">
+                                            <div class="tech-icon text-center">
+                                                <img src="images/skills/typescripticon.svg" alt="Typescript"
+                                                    title="Typescript" loading="lazy" style="height: 50px;">
+                                                <div>TypeScript</div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Vue -->
+                                        <div class="col-6 col-md-3 col-lg-2">
+                                            <div class="tech-icon text-center">
+                                                <img src="images/skills/vue.png" alt="Vue" title="Vue" loading="lazy">
+                                                <div>Vue.js</div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Nuxt -->
+                                        <div class="col-6 col-md-3 col-lg-2">
+                                            <div class="tech-icon text-center">
+                                                <img src="images/skills/nuxt.svg" alt="Nuxt" title="Nuxt" loading="lazy"
+                                                    style="height: 50px;">
+                                                <div>Nuxt.js</div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                    <!-- Backend -->
+                                    <h4 class="mt-5">Backend</h4>
+                                    <div class="row g-3">
+                                        <!-- Python -->
+                                        <div class="col-6 col-md-3 col-lg-2">
+                                            <div class="tech-icon text-center">
+                                                <img src="images/skills/python.svg" alt="Python" title="Python"
+                                                    loading="lazy">
+                                                <div>Python</div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Django -->
+                                        <div class="col-6 col-md-3 col-lg-2">
+                                            <div class="tech-icon text-center">
+                                                <img src="images/skills/django.svg" alt="Django" title="Django"
+                                                    loading="lazy">
+                                                <div>Django</div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Django REST Framework -->
+                                        <div class="col-6 col-md-3 col-lg-2">
+                                            <div class="tech-icon text-center">
+                                                <img src="images/skills/django_rest_framework.png"
+                                                    alt="DjangoRestFramework" title="DRF" loading="lazy"
+                                                    style="max-width: 80px;">
+                                                <div>DRF</div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Celery -->
+                                        <div class="col-6 col-md-3 col-lg-2">
+                                            <div class="tech-icon text-center">
+                                                <img src="images/skills/celery.svg" alt="Celery" title="Celery"
+                                                    loading="lazy">
+                                                <div>Celery</div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Databases -->
+                                    <h4 class="mt-5">Databases</h4>
+                                    <div class="row g-3">
+                                        <!-- PostgreSQL -->
+                                        <div class="col-6 col-md-3 col-lg-2">
+                                            <div class="tech-icon text-center">
+                                                <img src="images/skills/postgres.png" alt="Postgres" title="Postgres"
+                                                    loading="lazy">
+                                                <div>PostgreSQL</div>
+                                            </div>
+                                        </div>
+
+                                        <!-- MongoDB -->
+                                        <div class="col-6 col-md-3 col-lg-2">
+                                            <div class="tech-icon text-center">
+                                                <img src="images/skills/mongodb.png" alt="MongoDB" title="MongoDB"
+                                                    loading="lazy" style="max-width: 80px;">
+                                                <div>MongoDB</div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Mysql -->
+                                        <div class="col-6 col-md-3 col-lg-2">
+                                            <div class="tech-icon text-center">
+                                                <img src="images/skills/mysql-ar.svg" alt="MySQL" title="MySQL"
+                                                    loading="lazy" style="max-width: 80px;">
+                                                <div>MySQL</div>
+                                            </div>
+                                        </div>
+
+                                        <!-- MariaDb -->
+                                        <div class="col-6 col-md-3 col-lg-2">
+                                            <div class="tech-icon text-center">
+                                                <img src="images/skills/mariadb-ar.svg" alt="MariaDB" title="MariaDB"
+                                                    loading="lazy" style="max-width: 80px;">
+                                                <div>MariaDB</div>
+                                            </div>
+                                        </div>
+
+                                        <!-- SQLite -->
+                                        <div class="col-6 col-md-3 col-lg-2">
+                                            <div class="tech-icon text-center">
+                                                <img src="images/skills/sqlite-ar.svg" alt="SQLite" title="SQLite"
+                                                    loading="lazy" style="max-width: 80px;">
+                                                <div>SQLite</div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <h4 class="mt-5">Task Queue & Caching</h4>
+                                    <div class="row g-3">
+                                        <!-- Redis -->
+                                        <div class="col-6 col-md-3 col-lg-2">
+                                            <div class="tech-icon text-center">
+                                                <img src="images/skills/redis-icon.svg" alt="Redis" title="Redis"
+                                                    loading="lazy">
+                                                <div>Redis</div>
+                                            </div>
+                                        </div>
+
+                                        <!-- RabbitMQ -->
+                                        <div class="col-6 col-md-3 col-lg-2">
+                                            <div class="tech-icon text-center">
+                                                <img src="images/skills/rabbitmq-icon.svg" alt="RabbitMQ"
+                                                    title="RabbitMQ" loading="lazy">
+                                                <div>RabbitMQ</div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- CI/CD & DevOps -->
+                                    <h4 class="mt-5">CI/CD & DevOps</h4>
+                                    <div class="row g-3">
+                                        <!-- Git -->
+                                        <div class="col-6 col-md-3 col-lg-2">
+                                            <div class="tech-icon text-center">
+                                                <img src="images/skills/git.svg" alt="Git" title="Git" loading="lazy">
+                                                <div>Git</div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Github -->
+                                        <div class="col-6 col-md-3 col-lg-2">
+                                            <div class="tech-icon text-center">
+                                                <img src="images/skills/github-tile.svg" alt="Github" title="Github"
+                                                    loading="lazy">
+                                                <div>Github</div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Gitlab -->
+                                        <div class="col-6 col-md-3 col-lg-2">
+                                            <div class="tech-icon text-center">
+                                                <img src="images/skills/gitlab-icon.svg" alt="Gitlab" title="Gitlab"
+                                                    loading="lazy">
+                                                <div>Gitlab</div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Docker -->
+                                        <div class="col-6 col-md-3 col-lg-2">
+                                            <div class="tech-icon text-center">
+                                                <img src="images/skills/docker.svg" alt="Docker" title="Docker"
+                                                    loading="lazy">
+                                                <div>Docker</div>
+                                            </div>
+                                        </div>
+
+                                        <!-- NGINX -->
+                                        <div class="col-6 col-md-3 col-lg-2">
+                                            <div class="tech-icon text-center">
+                                                <img src="images/skills/nginx-icon.svg" alt="NGINX" title="NGINX"
+                                                    loading="lazy">
+                                                <div>NGINX</div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <h4 class="mt-5">Server & Deployments</h4>
+                                    <div class="row g-3">
+                                        <!-- Linux -->
+                                        <div class="col-6 col-md-3 col-lg-2">
+                                            <div class="tech-icon text-center">
+                                                <img src="images/skills/linux-icon.svg" alt="Linux" title="Linux"
+                                                    loading="lazy">
+                                                <div>Linux</div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Heroku -->
+                                        <div class="col-6 col-md-3 col-lg-2">
+                                            <div class="tech-icon text-center">
+                                                <img src="images/skills/heroku-icon.svg" alt="Heroku" title="Heroku"
+                                                    loading="lazy">
+                                                <div>Heroku</div>
+                                            </div>
+                                        </div>
+
+                                        <!-- AWS -->
+                                        <div class="col-6 col-md-3 col-lg-2">
+                                            <div class="tech-icon text-center">
+                                                <img src="images/skills/amazon_aws-icon.svg" alt="AWS" title="AWS"
+                                                    loading="lazy">
+                                                <div>AWS</div>
+                                            </div>
+                                        </div>
+
+                                        <!-- GCP -->
+                                        <div class="col-6 col-md-3 col-lg-2">
+                                            <div class="tech-icon text-center">
+                                                <img src="images/skills/google_cloud-icon.svg" alt="GCP" title="GCP"
+                                                    loading="lazy">
+                                                <div>GCP</div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Fly -->
+                                        <div class="col-6 col-md-3 col-lg-2">
+                                            <div class="tech-icon text-center">
+                                                <img src="images/skills/flyio-icon.svg" alt="Fly.io" title="Fly.io"
+                                                    loading="lazy">
+                                                <div>Fly.io</div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <h4 class="mt-5">Logging & Monitoring</h4>
+                                    <div class="row g-3">
+                                        <!-- Sentry -->
+                                        <div class="col-6 col-md-3 col-lg-2">
+                                            <div class="tech-icon text-center">
+                                                <img src="images/skills/sentryio-icon.svg" alt="Sentry" title="Sentry"
+                                                    loading="lazy">
+                                                <div>Sentry</div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <h4 class="mt-5">API Documentation</h4>
+                                    <div class="row g-3">
+                                        <!-- Swagger -->
+                                        <div class="col-6 col-md-3 col-lg-2">
+                                            <div class="tech-icon text-center">
+                                                <img src="images/skills/swagger.png" alt="Swagger" title="Swagger"
+                                                    loading="lazy">
+                                                <div>Swagger</div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Postman -->
+                                        <div class="col-6 col-md-3 col-lg-2">
+                                            <div class="tech-icon text-center">
+                                                <img src="images/skills/getpostman-icon.svg" alt="Postman"
+                                                    title="Postman" loading="lazy">
+                                                <div>Postman</div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <h4 class="mt-5">Tools</h4>
+                                    <div class="row g-3">
+                                        <!-- Jira -->
+                                        <div class="col-6 col-md-3 col-lg-2">
+                                            <div class="tech-icon text-center">
+                                                <img src="images/skills/atlassian_jira-icon.svg" alt="Jira" title="Jira"
+                                                    loading="lazy">
+                                                <div>Jira</div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Asana -->
+                                        <div class="col-6 col-md-3 col-lg-2">
+                                            <div class="tech-icon text-center">
+                                                <img src="images/skills/asana-ar21~bgwhite.svg" alt="Asana"
+                                                    title="Asana" loading="lazy">
+                                                <div>Asana</div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <h4 class="mt-5">IDE</h4>
+                                    <div class="row g-3">
+                                        <!-- VS Code -->
+                                        <div class="col-6 col-md-3 col-lg-2">
+                                            <div class="tech-icon text-center">
+                                                <img src="images/skills/visualstudio_code-icon.svg" alt="VS Code"
+                                                    title="VS Code" loading="lazy">
+                                                <div>VS Code</div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Pycharm -->
+                                        <div class="col-6 col-md-3 col-lg-2">
+                                            <div class="tech-icon text-center">
+                                                <img src="images/skills/pycharm.jpeg" alt="Pycharm" title="Pycharm"
+                                                    loading="lazy">
+                                                <div>Pycharm</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+
+
     <!-- Article Section Starts -->
+    <section id="articles" class="bg-gradient pt-5 pb-5 text-white">
+        <div class="container">
+            <div class="row mb-4 text-center">
+                <div class="col">
+                    <h2 class="fw-bold">Latest Articles</h2>
+                    <p class="text-muted">Thoughts, tutorials, and tech stories from Medium</p>
+                </div>
+            </div>
+            <div class="row g-4" id="articles-container">
+                <!-- Articles will be injected here -->
+            </div>
+        </div>
+    </section>
+    <!-- Article Section Ends -->
 
     <!-- Repos Section Starts -->
-    <section id="git-repos" class="bg-gradient pt-5 text-white">
+    <!-- <section id="git-repos" class="bg-gradient pt-5 pb-5 text-white">
         <div class="container">
             <div class="row align-items-start">
-                <div class="col mb-5">
+                <div class="col">
                     <h2 class="mb-5">
                         <a href="https://github.com/Ashinsk" class="linkedin"><i class="bx bxl-github"></i></a>
                         Github Repos
                     </h2>
 
-                    <div class="row mb-5">
-                        <div class="col-sm-6">
-                            <div class="card shadow-sm border-0 rounded-4 mb-4">
-                                <div class="card-body">
-                                    <div class="d-flex justify-content-between align-items-start">
-                                        <div>
-                                            <h5 class="card-title fw-bold mb-2">Text Classification</h5>
-                                            <p class="card-text text-muted mb-3">
-                                                A repository that contains various methods to classify text. Includes
-                                                KNN and Logistic Regression algorithms.
-                                            </p>
-                                        </div>
-                                        <a href="https://github.com/Ashinsk/Text-Classification" target="_blank"
-                                            class="btn btn-dark rounded-circle d-flex align-items-center justify-content-center"
-                                            style="width: 40px; height: 40px;">
-                                            <i class="bx bxl-github fs-4 text-white"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-
-                        <div class="col-sm-6">
-                            <div class="card shadow-sm border-0 rounded-4 mb-4">
-                                <div class="card-body">
-                                    <div class="d-flex justify-content-between align-items-start">
-                                        <div>
-                                            <h5 class="card-title fw-bold mb-2">Text Similarity</h5>
-                                            <p class="card-text text-muted mb-3">
-                                                A repository that contains various methods to check text similarity.
-                                                Includes TF-IDF and other vectorizers.
-                                            </p>
-                                        </div>
-                                        <a href="https://github.com/Ashinsk/Text-Similarity" target="_blank"
-                                            class="btn btn-dark rounded-circle d-flex align-items-center justify-content-center"
-                                            style="width: 40px; height: 40px;">
-                                            <i class="bx bxl-github fs-4 text-white"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-sm-6">
-                            <div class="card shadow-sm border-0 rounded-4 mb-4">
-                                <div class="card-body">
-                                    <div class="d-flex justify-content-between align-items-start">
-                                        <div>
-                                            <h5 class="card-title fw-bold mb-2">Text Summarization</h5>
-                                            <p class="card-text text-muted mb-3">
-                                                A repository that contains various methods to summarize texts. Popular
-                                                algorithms used are TF and TF-IDF.
-                                            </p>
-                                        </div>
-                                        <a href="https://github.com/Ashinsk/Text-Summarization" target="_blank"
-                                            class="btn btn-dark rounded-circle d-flex align-items-center justify-content-center"
-                                            style="width: 40px; height: 40px;">
-                                            <i class="bx bxl-github fs-4 text-white"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
+                    <div class="row" id="repos-container">
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
     <!-- Repos Section Ends -->
 
     <!-- Contact Section Starts -->
     <section id="contact" class="pt-5">
         <div class="container">
             <div class="row mb-5">
+                <!-- Form Card -->
                 <div class="col-lg-6 col-md-12 mb-5">
-                    <h2 class="mb-5">Contact Me</h2>
-                    <form class="form" id="my-form" method="POST" action="https://formspree.io/f/xayzdgew">
-                        <div class="mb-3">
-                            <label for="name" class="form-label">Name</label>
-                            <input type="text" class="form-control" id="name" aria-describedby="name" name="name"
-                                required>
-                        </div>
+                    <div class="card shadow-lg border-0 rounded-4 p-4">
+                        <h2 class="mb-4">Contact Me</h2>
+                        <form class="form" id="my-form" method="POST" action="https://formspree.io/f/xayzdgew">
+                            <div class="mb-3">
+                                <label for="name" class="form-label">Name</label>
+                                <input type="text" class="form-control" id="name" aria-describedby="name" name="name"
+                                    required>
+                            </div>
 
-                        <div class="mb-3">
-                            <label for="email" class="form-label">Email address</label>
-                            <input type="email" class="form-control" id="email" aria-describedby="email" name="email"
-                                required>
-                        </div>
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Email address</label>
+                                <input type="email" class="form-control" id="email" aria-describedby="email"
+                                    name="email" required>
+                            </div>
 
-                        <div class="mb-3">
-                            <label for="subject" class="form-label">Subject</label>
-                            <input type="text" class="form-control" id="subject" aria-describedby="subject"
-                                name="subject" required>
-                        </div>
+                            <div class="mb-3">
+                                <label for="subject" class="form-label">Subject</label>
+                                <input type="text" class="form-control" id="subject" aria-describedby="subject"
+                                    name="subject" required>
+                            </div>
 
-                        <div class="mb-3">
-                            <label for="message" class="form-label">Message</label>
-                            <textarea class="form-control" id="message" aria-describedby="message" name="message"
-                                required></textarea>
-                        </div>
+                            <div class="mb-3">
+                                <label for="message" class="form-label">Message</label>
+                                <textarea class="form-control" id="message" aria-describedby="message" name="message"
+                                    rows="4" required></textarea>
+                            </div>
 
-                        <button type="submit" class="btn btn-primary">Submit</button>
-
-                        <p id="my-form-status"></p>
-                    </form>
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                            <p id="my-form-status" class="mt-3"></p>
+                        </form>
+                    </div>
                 </div>
+
+                <!-- Chat Side -->
                 <div class="col-lg-6 col-md-12 mb-5 text-center bg-body-tertiary rounded chat bg-gradient py-5 text-white dashboard-img"
                     style="background-image: url('images/images/dashboard.jpg')!important;">
                     <div>
-                        <p class="h5">LET'S CHAT.</p> </br>
+                        <p class="h5">LET'S CHAT.</p><br>
                         <p class="h5">Tell me about your project.</p>
-                        <p class="h5">Let's create something togther!</p>
+                        <p class="h5">Let's create something together!</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
     <!-- Contact Section Ends -->
+
 
     <!-- Footer Section Starts -->
     <footer class="bg-gradient text-white">
@@ -481,5 +764,118 @@
     crossorigin="anonymous"></script>
 
 <script src="https://www.twilik.com/assets/retainable/rss-embed/retainable-rss-embed.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
+<script>
+    async function loadArticles() {
+        const rssFeed = 'https://medium.com/feed/@ashins1997';
+        const apiUrl = `https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(rssFeed)}`;
+
+        const defaultThumbnail = 'images/images/dashboard.jpg';
+
+        try {
+            const res = await fetch(apiUrl);
+            const data = await res.json();
+            const articles = data.items.slice(0, 6); // Top 6 articles
+            const container = document.getElementById('articles-container');
+
+            articles.forEach(article => {
+                const thumbnail = (article.thumbnail && !article.thumbnail.includes('medium.com/_'))
+                    ? article.thumbnail
+                    : defaultThumbnail;
+
+                const card = document.createElement('div');
+                card.className = 'col-md-6 col-lg-4';
+
+                card.innerHTML = `
+                    <div class="card h-100 shadow-sm border-0 rounded-4 overflow-hidden">
+                        <img src="${thumbnail}" class="card-img-top" alt="${article.title}" style="height: 150px; object-fit: cover; width: 100%;">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title fw-semibold">${article.title}</h5>
+                            <p class="card-text text-muted" style="flex-grow: 1;">${article.description.replace(/<[^>]+>/g, '').slice(0, 120)}...</p>
+                            <a href="${article.link}" target="_blank" class="btn btn-dark mt-3 px-4 py-2 rounded-pill">Read More</a>
+                        </div>
+                    </div>
+                `;
+
+                container.appendChild(card);
+            });
+        } catch (err) {
+            console.error("Failed to load articles:", err);
+        }
+    }
+
+    document.addEventListener('DOMContentLoaded', loadArticles);
+</script>
+
+
+<script>
+    async function loadRepos() {
+        const username = 'Ashinsk';  // GitHub username
+        const apiUrl = `https://api.github.com/users/${username}/repos?type=public&sort=updated`;
+
+        try {
+            const res = await fetch(apiUrl);
+            const repos = await res.json();
+            const container = document.getElementById('repos-container');
+            container.innerHTML = ''; // Clear any existing content
+
+            // Filter out forked repositories and the "Ashinsk" repo
+            const nonForkedRepos = repos.filter(repo => !repo.fork && repo.name !== 'Ashinsk');
+
+
+            nonForkedRepos.forEach(repo => {
+                const card = document.createElement('div');
+                card.className = 'col-sm-6 col-md-4';
+
+                card.innerHTML = `
+                    <div class="card shadow-sm border-0 rounded-4 mb-4">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-start">
+                                <div>
+                                    <h5 class="card-title fw-bold mb-2">${repo.name}</h5>
+                                    <p class="card-text text-muted mb-3">
+                                        ${repo.description ? repo.description : 'No description available.'}
+                                    </p>
+                                </div>
+                                <a href="${repo.html_url}" target="_blank"
+                                    class="btn btn-dark rounded-circle d-flex align-items-center justify-content-center"
+                                    style="width: 40px; height: 40px;">
+                                    <i class="bx bxl-github fs-4 text-white"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                `;
+
+                container.appendChild(card);
+            });
+        } catch (err) {
+            console.error("Failed to load repositories:", err);
+        }
+    }
+
+    document.addEventListener('DOMContentLoaded', loadRepos);
+</script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        new Typed("#typed-name", {
+            strings: ["Ashin Shakya"],
+            typeSpeed: 50,
+            showCursor: false,
+        });
+
+        setTimeout(() => {
+            new Typed("#typed-role", {
+                strings: ["I'm a passionate software developer"],
+                typeSpeed: 50,
+                startDelay: 100,
+            });
+        }, 1000);
+    });
+</script>
+
 
 </html>
