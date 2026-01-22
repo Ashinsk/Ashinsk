@@ -177,7 +177,7 @@
 
             <div class="row g-4">
                 <div class="col-lg-6">
-                    <div class="glass-card h-100">
+                    <div class="glass-card h-100 cursor-pointer" data-experience-id="1">
                         <div class="d-flex justify-content-between align-items-start mb-3">
                             <div>
                                 <h4 class="h5 fw-bold mb-1">Software Developer</h4>
@@ -206,7 +206,7 @@
                 </div>
 
                 <div class="col-lg-6">
-                    <div class="glass-card h-100">
+                    <div class="glass-card h-100 cursor-pointer" data-experience-id="2">
                         <div class="d-flex justify-content-between align-items-start mb-3">
                             <div>
                                 <h4 class="h5 fw-bold mb-1">Software Developer</h4>
@@ -533,6 +533,30 @@
         </div>
     </section>
 
+    <div class="modal fade" id="experienceModal" tabindex="-1" aria-labelledby="experienceModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content glass-card border-0">
+                <div class="modal-header border-bottom border-secondary border-opacity-25">
+                    <h5 class="modal-title fw-bold text-white" id="experienceModalLabel">Experience Details
+                    </h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-light">
+                    <h4 id="modal-role" class="fw-bold mb-1 text-info"></h4>
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                        <span id="modal-company" class="fs-5"></span>
+                        <span id="modal-date"
+                            class="badge bg-primary bg-opacity-25 text-primary border border-primary border-opacity-25"></span>
+                    </div>
+                    <div id="modal-description"></div>
+                    <div id="modal-tech" class="mt-4 d-flex flex-wrap gap-2"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Footer -->
     <footer class="py-4 text-center border-top border-secondary border-opacity-25"
         style="background: rgba(15, 23, 42, 0.8);">
@@ -549,13 +573,38 @@
         </div>
     </footer>
 
+    <div class="modal fade" id="experienceModal" tabindex="-1" aria-labelledby="experienceModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content glass-card border-0">
+                <div class="modal-header border-bottom border-secondary border-opacity-25">
+                    <h5 class="modal-title fw-bold text-white" id="experienceModalLabel">Experience Details</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-light">
+                    <h4 id="modal-role" class="fw-bold mb-1 text-info"></h4>
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                        <span id="modal-company" class="fs-5"></span>
+                        <span id="modal-date"
+                            class="badge bg-primary bg-opacity-25 text-primary border border-primary border-opacity-25"></span>
+                    </div>
+                    <div id="modal-description"></div>
+                    <div id="modal-tech" class="mt-4 d-flex flex-wrap gap-2"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
         crossorigin="anonymous"></script>
+
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 
     <script src="https://www.twilik.com/assets/retainable/rss-embed/retainable-rss-embed.js"></script>
+
     <script>
         document.addEventListener("DOMContentLoaded", () => {
             // Typing Effect
@@ -584,6 +633,34 @@
             if (expElement) {
                 expElement.innerText = currentYear - startYear;
             }
+
+            // Modal Logic
+            const experienceCards = document.querySelectorAll('#resume .glass-card');
+            const modal = new bootstrap.Modal(document.getElementById('experienceModal'));
+            const modalRole = document.getElementById('modal-role');
+            const modalCompany = document.getElementById('modal-company');
+            const modalDate = document.getElementById('modal-date');
+            const modalDescription = document.getElementById('modal-description');
+            const modalTech = document.getElementById('modal-tech');
+
+            experienceCards.forEach(card => {
+                card.addEventListener('click', () => {
+                    const role = card.querySelector('h4').innerText;
+                    const company = card.querySelector('a').innerText;
+                    const companyLink = card.querySelector('a').getAttribute('href');
+                    const date = card.querySelector('.badge').innerText;
+                    const list = card.querySelector('ul').innerHTML;
+                    const techStack = card.querySelector('.d-flex.flex-wrap').innerHTML;
+
+                    modalRole.innerText = role;
+                    modalCompany.innerHTML = `<a href="${companyLink}" target="_blank" class="text-decoration-none text-white hover-info">${company}</a>`;
+                    modalDate.innerText = date;
+                    modalDescription.innerHTML = `<ul class="ps-3">${list}</ul>`;
+                    modalTech.innerHTML = techStack;
+
+                    modal.show();
+                });
+            });
         });
     </script>
 </body>
