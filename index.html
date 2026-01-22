@@ -14,7 +14,7 @@
 
     <title>Ashin Shakya | Software Developer | Python & Django Expert</title>
 
-    <!-- Open Graph Meta Tags -->
+    <!-- Open Graph Meta Tags (For Facebook, LinkedIn, etc.) -->
     <meta property="og:title" content="Ashin Shakya - Python & Django Developer">
     <meta property="og:description"
         content="Experienced software developer specializing in Python, Django, and backend development.">
@@ -22,7 +22,7 @@
     <meta property="og:url" content="https://ashinshakya.com.np">
     <meta property="og:type" content="website">
 
-    <!-- Twitter Card -->
+    <!-- Twitter Card Meta Tags (For Twitter) -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Ashin Shakya - Software Developer">
     <meta name="twitter:description" content="Python and Django developer with expertise in backend development.">
@@ -35,7 +35,7 @@
 
     <link href="styles.css" rel="stylesheet">
 
-    <!-- Favicon -->
+    <!-- Favicon (optional) -->
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
 
     <script type="text/javascript">
@@ -45,115 +45,212 @@
             y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
         })(window, document, "clarity", "script", "ll8t200vke");
     </script>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Ashin Shakya",
+        "jobTitle": "Software Developer",
+        "url": "https://ashinshakya.com.np",
+        "sameAs": [
+            "https://github.com/Ashinsk",
+            "https://www.linkedin.com/in/ashin-shakya",
+            "https://medium.com/@ashins1997"
+        ]
+    }
+    </script>
 </head>
 
-<body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="100">
+<body>
 
     <!-- Navbar Starts-->
-    <nav class="navbar navbar-expand-lg fixed-top">
+    <nav class="navbar navbar-expand-lg fixed-top text-white bg-gradient">
         <div class="container-fluid">
-            <a class="navbar-brand d-flex align-items-center gap-3" href="#">
-                <img src="images/images/profile1.jpg" alt="Ashin Shakya"
-                    class="rounded-circle border border-2 border-white" width="45" height="45">
-                <h1 style="font-size:1.4rem;margin-bottom: 0;">Ashin.dev</h1>
+            <a class="navbar-brand d-flex align-items-center gap-2" href="#">
+                <img src="images/images/profile1.jpg" alt="Ashin Shakya" class="rounded-circle" width="40" height="40">
+                <h1 style="font-size:1.2rem;margin-bottom: 0;">Ashin Shakya</h1>
             </a>
 
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon" style="filter: invert(1);"></span>
+                <span class="navbar-toggler-icon"></span>
             </button>
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-2">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link" href="#home">Home</a>
+                        <a class="nav-link" aria-current="page" href="#home">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#about">About</a>
+                        <a class="nav-link" aria-current="page" href="#about">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#resume">Experience</a>
+                        <a class="nav-link" aria-current="page" href="#resume">Resume</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#tools">Skills</a>
+                        <a class="nav-link" aria-current="page" href="#articles">Articles</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#articles">Articles</a>
+                        <a class="nav-link" aria-current="page" href="#git-repos">Repos</a>
+                    </li>
+                    <!-- <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="#services">Services</a>
+                    </li> -->
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="https://blog.ashinshakya.com.np">Blog</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="https://blog.ashinshakya.com.np" target="_blank">Blog</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#contact">Contact</a>
+                        <a class="nav-link" aria-current="page" href="#contact">Contact</a>
                     </li>
                 </ul>
             </div>
+
         </div>
     </nav>
     <!-- Navbar Ends-->
 
     <!-- Landing Section Starts -->
-    <section class="min-vh-100 d-flex align-items-center justify-content-center text-center" id="home">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-10">
-                    <span class="h5 text-uppercase letter-spacing-sm text-muted mb-3 d-block">Hello, World! I am</span>
-                    <h1 class="display-1 hero-text mb-4">
-                        Ashin Shakya
-                    </h1>
-                    <div class="h2 mb-5">
-                        <span id="typed-role" class="role-text"></span>
-                    </div>
+    <section class="text-white position-relative bg-cover dashboard-img" id="home">
+        <div class="container vh-100 d-flex flex-column justify-content-center align-items-center text-center">
+            <div class="mb-4">
+                <span class="h5 text-uppercase letter-spacing-sm text-light mb-2">Hey! I am</span>
+                <h1 class="display-4 fw-bold text-shadow">
+                    <span id="typed-name"></span>
+                </h1>
+                <span class="h5 text-uppercase letter-spacing-sm text-light">
+                    <span id="typed-role"></span>
+                </span>
+            </div>
 
-                    <div class="d-flex justify-content-center gap-4 mt-5">
-                        <a href="https://github.com/Ashinsk" target="_blank" class="social-btn" title="GitHub">
-                            <i class="bx bxl-github"></i>
-                        </a>
-                        <a href="https://www.linkedin.com/in/ashin-shakya" target="_blank" class="social-btn"
-                            title="LinkedIn">
-                            <i class="bx bxl-linkedin"></i>
-                        </a>
-                        <a href="https://medium.com/@ashins1997" target="_blank" class="social-btn" title="Medium">
-                            <i class="bx bxl-medium"></i>
-                        </a>
-                        <a href="#" class="social-btn" title="Skype">
-                            <i class="bx bxl-skype"></i>
-                        </a>
-                    </div>
-                </div>
+            <div class="d-flex gap-3 mt-3">
+                <a href="https://github.com/Ashinsk" target="_blank"
+                    class="btn btn-outline-light btn-lg rounded-circle d-flex align-items-center justify-content-center icon-hover"
+                    style="width: 50px; height: 50px;">
+                    <i class="bx bxl-github fs-4"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/ashin-shakya" target="_blank"
+                    class="btn btn-outline-light btn-lg rounded-circle d-flex align-items-center justify-content-center icon-hover"
+                    style="width: 50px; height: 50px;">
+                    <i class="bx bxl-linkedin fs-4"></i>
+                </a>
+                <a href="https://medium.com/@ashins1997" target="_blank"
+                    class="btn btn-outline-light btn-lg rounded-circle d-flex align-items-center justify-content-center icon-hover"
+                    style="width: 50px; height: 50px;">
+                    <i class="bx bxl-medium fs-4"></i>
+                </a>
+                <a href="#"
+                    class="btn btn-outline-light btn-lg rounded-circle d-flex align-items-center justify-content-center icon-hover"
+                    style="width: 50px; height: 50px;">
+                    <i class="bx bxl-skype fs-4"></i>
+                </a>
             </div>
         </div>
     </section>
     <!-- Landing Section Ends -->
 
+
     <!-- About Section Starts -->
     <section id="about" class="py-5">
-        <div class="container py-5">
-            <div class="row align-items-center g-5">
-                <div class="col-lg-7">
-                    <div class="glass-card">
-                        <h2 class="section-title">About Me</h2>
-                        <h4 class="fw-bold mb-3 text-white">Software Developer</h4>
-                        <p class="text-muted mb-4">ashinsk489@gmail.com</p>
-
-                        <p class="lead text-light about-me">
-                            Hi, I'm a software developer with <span id="exp-years"
-                                class="text-gradient fw-bold"></span>+ years of experience
-                            building web applications.
-                        </p>
-                        <p class="text-secondary">
-                            I'm passionate about delivering efficient, scalable, and user-friendly software
-                            solutions. I thrive on collaborating with diverse teams and staying at the forefront of
-                            emerging
-                            technologies to create innovative applications that make a difference.
-                        </p>
+        <div class="container">
+            <div class="row">
+                <!-- Left Column: About Me + Skills -->
+                <div class="col-md-8 pt-5 d-flex flex-column">
+                    <div class="card flex-fill p-4 shadow-lg border-0 rounded-4 bg-light text-dark">
+                        <div class="card-body">
+                            <div class="d-flex flex-column flex-md-row justify-content-between align-items-start">
+                                <div class="mb-3">
+                                    <h4 class="fw-bold mb-1">Ashin Shakya</h4>
+                                    <p class="mb-0 text-muted">ashinsk489@gmail.com</p>
+                                </div>
+                            </div>
+                            <p class="mt-3 mb-0 about-me">
+                                Hi, I'm a software developer with <span id="exp-years"></span>+ years of experience
+                                building web applications.
+                                I'm passionate about delivering efficient, scalable, and user-friendly software
+                                solutions.
+                                I'm excited about collaborating with others and staying up-to-date on emerging
+                                technologies to create
+                                innovative and impactful applications. Check out my portfolio to see some of my recent
+                                projects and get in
+                                touch if you'd like to discuss working together.
+                            </p>
+                        </div>
                     </div>
                 </div>
-                <div class="col-lg-5">
-                    <div class="position-relative">
-                        <div class="glass-card p-2" style="transform: rotate(3deg);">
-                            <img src="images/images/profile1.jpg" class="img-fluid rounded-4 w-100" alt="Ashin Shakya">
+
+                <!-- Right Column: Image -->
+                <div class="col-md-4 pt-5 d-flex align-items-stretch">
+                    <div class="w-100 card shadow-lg border-0 rounded-4 overflow-hidden">
+                        <img src="images/images/profile1.jpg" class="img-fluid w-100 h-100 object-fit-cover"
+                            alt="Ashin Shakya - Python and Django Developer" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- About Section Ends -->
+
+    <!-- About Section Starts -->
+    <section id="resume" class="bg-gradient pt-5 text-white">
+        <div class="container">
+            <div class="row align-items-start">
+                <div class="col mb-5">
+                    <h2 class="mb-5">Experience</h2>
+                    <div class="container">
+                        <div class="mb-5">
+                            <h5 class="card-title mb-1">Software Developer</h5>
+                            <h6 class="card-subtitle mb-3"><a href="https://khalti.com" class="text-info">Khalti Pvt
+                                    Ltd</a> <span class="text-white">| 2021 -
+                                    Present</span></h6>
+                            <ul class="list-unstyled experience">
+                                <li>Collaborated with team of developers and designers to develop a new feature that
+                                    improved the user experience.</li>
+                                <li>Implemented new features and functionality resulting in more user engagement.</li>
+                                <li>Developed APIs using to integrate with third-party platforms and services.</li>
+                                <li>Worked with the DevOps team to implement continuous integration and deployment,
+                                    resulting in faster releases and fewer deployment issues.</li>
+                                <li>Participated in code reviews and provided feedback to team members, helping to
+                                    improve code quality and maintainability.</li>
+                                <li>Trained junior developers on the software platform and coding best practices,
+                                    resulting in improved code quality and faster onboarding of new team members.</li>
+                                <li>Integrated third-party APIs for authentication and payment processing, ensuring a
+                                    secure and seamless user experience.</li>
+                                <li>Implemented automated testing using Pytest, ensuring high code quality and reducing
+                                    the number of bugs.</li>
+                            </ul>
+
+                            <div class="mt-3">
+                                <span class="badge bg-secondary me-1">Python</span>
+                                <span class="badge bg-secondary me-1">Django</span>
+                                <span class="badge bg-secondary me-1">CI/CD</span>
+                                <span class="badge bg-secondary me-1">Pytest</span>
+                                <span class="badge bg-secondary">API Integration</span>
+                            </div>
+                        </div>
+                        <div class="mb-5">
+                            <h5 class="card-title mb-1">Software Developer</h5>
+                            <h6 class="card-subtitle mb-3 text-info"><a href="http://ptas.com.np/"
+                                    class="text-info">Pathway Technologies</a> <span class="text-white">|
+                                    2018 - 2021</span></h6>
+                            <ul class="list-unstyled experience">
+                                <li>Developed new web application using Python and the Django framework, working as the
+                                    sole developer on the project.</li>
+                                <li>Conducted detailed requirements gathering and analysis, working closely with
+                                    stakeholders to ensure that the application met business needs.</li>
+                                <li>Designed the database schema and implemented the application's data model using
+                                    PostgreSQL, ensuring data accuracy and integrity.</li>
+                                <li>Developed the user interface using HTML, CSS, and JavaScript, ensuring a modern and
+                                    intuitive user experience.</li>
+                            </ul>
+
+                            <div class="mt-3">
+                                <span class="badge bg-secondary me-1">Python</span>
+                                <span class="badge bg-secondary me-1">Django</span>
+                                <span class="badge bg-secondary me-1">PostgreSQL</span>
+                                <span class="badge bg-secondary">HTML/CSS/JS</span>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -162,8 +259,7 @@
     </section>
     <!-- About Section Ends -->
 
-    <!-- Experience Section Starts -->
-    <section id="resume" class="py-5">
+    <section id="tools" class="pt-5 pb-5 bg-light">
         <div class="container">
             <div class="row align-items-start">
                 <div class="col">
@@ -330,7 +426,7 @@
                                         </div>
                                     </div>
 
-                                    <div class="container-fluid mt-5">
+                                    <div class="fluid-container mt-5">
                                         <div class="row align-items-start">
 
                                             <!-- Task Queue & Caching Section -->
@@ -549,164 +645,23 @@
                                     </div>
                                 </div>
                             </div>
-                            <span
-                                class="badge bg-primary bg-opacity-25 text-primary border border-primary border-opacity-25 rounded-pill px-3 py-2">Since
-                                2021</span>
-                        </div>
-                        <ul class="list-unstyled text-secondary experience mb-4">
-                            <li class="mb-2"><i class="bx bx-check text-success me-2"></i>Backend development with
-                                Python & Django.</li>
-                            <li class="mb-2"><i class="bx bx-check text-success me-2"></i>API design & 3rd party
-                                integrations.</li>
-                            <li class="mb-2"><i class="bx bx-check text-success me-2"></i>Automated testing with Pytest.
-                            </li>
-                            <li class="mb-2"><i class="bx bx-check text-success me-2"></i>CI/CD pipeline optimization.
-                            </li>
-                            <li class="mb-2"><i class="bx bx-check text-success me-2"></i>Mentoring junior developers.
-                            </li>
-                        </ul>
-                        <div class="d-flex flex-wrap gap-2">
-                            <span class="badge bg-dark border border-secondary text-secondary">Python</span>
-                            <span class="badge bg-dark border border-secondary text-secondary">Django</span>
-                            <span class="badge bg-dark border border-secondary text-secondary">PostgreSQL</span>
-                            <span class="badge bg-dark border border-secondary text-secondary">Pytest</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-6">
-                    <div class="glass-card h-100">
-                        <div class="d-flex justify-content-between align-items-start mb-3">
-                            <div>
-                                <h4 class="mb-1 text-white">Pathway Technologies</h4>
-                                <h6 class="text-accent mb-0">Software Developer</h6>
-                            </div>
-                            <span
-                                class="badge bg-secondary bg-opacity-25 text-white border border-secondary border-opacity-25 rounded-pill px-3 py-2">2018
-                                - 2021</span>
-                        </div>
-                        <ul class="list-unstyled text-secondary experience mb-4">
-                            <li class="mb-2"><i class="bx bx-check text-success me-2"></i>Full-stack development (Django
-                                + JS).</li>
-                            <li class="mb-2"><i class="bx bx-check text-success me-2"></i>Requirement analysis &
-                                Database design.</li>
-                            <li class="mb-2"><i class="bx bx-check text-success me-2"></i>End-to-end project management.
-                            </li>
-                        </ul>
-                        <div class="d-flex flex-wrap gap-2">
-                            <span class="badge bg-dark border border-secondary text-secondary">Python</span>
-                            <span class="badge bg-dark border border-secondary text-secondary">Django</span>
-                            <span class="badge bg-dark border border-secondary text-secondary">JavaScript</span>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <!-- Experience Section Ends -->
 
-    <!-- Tools Section Starts -->
-    <section id="tools" class="py-5">
+
+    <!-- Article Section Starts -->
+    <section id="articles" class="bg-gradient pt-5 pb-5 text-white">
         <div class="container">
-            <h2 class="section-title">Tech Stack</h2>
-
-            <!-- Frontend -->
-            <h5 class="text-muted mb-4 mt-5 border-bottom border-light pb-2 d-inline-block">Frontend</h5>
-            <div class="row g-4">
-                <div class="col-6 col-md-3 col-lg-2">
-                    <div class="tech-icon"><img src="images/skills/html.png" loading="lazy">
-                        <div>HTML5</div>
-                    </div>
-                </div>
-                <div class="col-6 col-md-3 col-lg-2">
-                    <div class="tech-icon"><img src="images/skills/css3.png" loading="lazy">
-                        <div>CSS3</div>
-                    </div>
-                </div>
-                <div class="col-6 col-md-3 col-lg-2">
-                    <div class="tech-icon"><img src="images/skills/javascript-icon.svg" loading="lazy">
-                        <div>JavaScript</div>
-                    </div>
-                </div>
-                <div class="col-6 col-md-3 col-lg-2">
-                    <div class="tech-icon"><img src="images/skills/typescripticon.svg" loading="lazy">
-                        <div>TypeScript</div>
-                    </div>
-                </div>
-                <div class="col-6 col-md-3 col-lg-2">
-                    <div class="tech-icon"><img src="images/skills/vue.png" loading="lazy">
-                        <div>Vue.js</div>
-                    </div>
-                </div>
-                <div class="col-6 col-md-3 col-lg-2">
-                    <div class="tech-icon"><img src="images/skills/nuxt.svg" loading="lazy">
-                        <div>Nuxt</div>
-                    </div>
+            <div class="row mb-4 text-center">
+                <div class="col">
+                    <h2 class="fw-bold">Latest Articles</h2>
+                    <p class="text-muted">Thoughts, tutorials, and tech stories from Medium</p>
                 </div>
             </div>
-
-            <!-- Backend -->
-            <h5 class="text-muted mb-4 mt-5 border-bottom border-light pb-2 d-inline-block">Backend</h5>
-            <div class="row g-4">
-                <div class="col-6 col-md-3 col-lg-2">
-                    <div class="tech-icon"><img src="images/skills/python.svg" loading="lazy">
-                        <div>Python</div>
-                    </div>
-                </div>
-                <div class="col-6 col-md-3 col-lg-2">
-                    <div class="tech-icon"><img src="images/skills/django.svg" loading="lazy">
-                        <div>Django</div>
-                    </div>
-                </div>
-                <div class="col-6 col-md-3 col-lg-2">
-                    <div class="tech-icon"><img src="images/skills/django_rest_framework.png" loading="lazy">
-                        <div>DRF</div>
-                    </div>
-                </div>
-                <div class="col-6 col-md-3 col-lg-2">
-                    <div class="tech-icon"><img src="images/skills/celery.svg" loading="lazy">
-                        <div>Celery</div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Databases & DevOps -->
-            <h5 class="text-muted mb-4 mt-5 border-bottom border-light pb-2 d-inline-block">Data & Infrastructure</h5>
-            <div class="row g-4">
-                <div class="col-6 col-md-3 col-lg-2">
-                    <div class="tech-icon"><img src="images/skills/postgres.png" loading="lazy">
-                        <div>PostgreSQL</div>
-                    </div>
-                </div>
-                <div class="col-6 col-md-3 col-lg-2">
-                    <div class="tech-icon"><img src="images/skills/docker.svg" loading="lazy">
-                        <div>Docker</div>
-                    </div>
-                </div>
-                <div class="col-6 col-md-3 col-lg-2">
-                    <div class="tech-icon"><img src="images/skills/git.svg" loading="lazy">
-                        <div>Git</div>
-                    </div>
-                </div>
-                <div class="col-6 col-md-3 col-lg-2">
-                    <div class="tech-icon"><img src="images/skills/amazon_aws-icon.svg" loading="lazy">
-                        <div>AWS</div>
-                    </div>
-                </div>
-                <div class="col-6 col-md-3 col-lg-2">
-                    <div class="tech-icon"><img src="images/skills/redis-icon.svg" loading="lazy">
-                        <div>Redis</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Tools Section Ends -->
-
-    <!-- Articles Section Starts -->
-    <section id="articles" class="py-5">
-        <div class="container">
-            <h2 class="section-title">Latest Articles</h2>
             <div class="row g-4" id="articles-container">
                 <!-- Articles will be injected here -->
             </div>
@@ -714,45 +669,70 @@
     </section>
     <!-- Article Section Ends -->
 
-    <!-- Contact Section Starts -->
-    <section id="contact" class="py-5 mb-5">
+    <!-- Repos Section Starts -->
+    <!-- <section id="git-repos" class="bg-gradient pt-5 pb-5 text-white">
         <div class="container">
-            <div class="row g-5">
-                <div class="col-lg-6">
-                    <div class="glass-card">
-                        <h2 class="mb-4">Get in Touch</h2>
-                        <form class="form w-100" id="my-form" method="POST" action="https://formspree.io/f/xayzdgew">
+            <div class="row align-items-start">
+                <div class="col">
+                    <h2 class="mb-5">
+                        <a href="https://github.com/Ashinsk" class="linkedin"><i class="bx bxl-github"></i></a>
+                        Github Repos
+                    </h2>
+
+                    <div class="row" id="repos-container">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> -->
+    <!-- Repos Section Ends -->
+
+    <!-- Contact Section Starts -->
+    <section id="contact" class="pt-5">
+        <div class="container">
+            <div class="row mb-5">
+                <!-- Form Card -->
+                <div class="col-lg-6 col-md-12 mb-5">
+                    <div class="card shadow-lg border-0 rounded-4 p-4">
+                        <h2 class="mb-4">Contact Me</h2>
+                        <form class="form" id="my-form" method="POST" action="https://formspree.io/f/xayzdgew">
                             <div class="mb-3">
-                                <label for="name" class="form-label text-white">Name</label>
-                                <input type="text" class="form-control" id="name" name="name" required>
+                                <label for="name" class="form-label">Name</label>
+                                <input type="text" class="form-control" id="name" aria-describedby="name" name="name"
+                                    required>
                             </div>
 
                             <div class="mb-3">
-                                <label for="email" class="form-label text-white">Email</label>
-                                <input type="email" class="form-control" id="email" name="email" required>
+                                <label for="email" class="form-label">Email address</label>
+                                <input type="email" class="form-control" id="email" aria-describedby="email"
+                                    name="email" required>
                             </div>
 
                             <div class="mb-3">
-                                <label for="message" class="form-label text-white">Message</label>
-                                <textarea class="form-control" id="message" name="message" rows="4" required></textarea>
+                                <label for="subject" class="form-label">Subject</label>
+                                <input type="text" class="form-control" id="subject" aria-describedby="subject"
+                                    name="subject" required>
                             </div>
 
-                            <button type="submit" class="btn btn-primary w-100 mt-2">Send Message</button>
-                            <p id="my-form-status" class="mt-3 text-center"></p>
+                            <div class="mb-3">
+                                <label for="message" class="form-label">Message</label>
+                                <textarea class="form-control" id="message" aria-describedby="message" name="message"
+                                    rows="4" required></textarea>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                            <p id="my-form-status" class="mt-3"></p>
                         </form>
                     </div>
                 </div>
 
-                <div class="col-lg-6">
-                    <div
-                        class="glass-card d-flex flex-column justify-content-center align-items-center text-center h-100">
-                        <h3 class="fw-bold mb-4">Let's Build Something Amazing</h3>
-                        <p class="text-secondary mb-5">
-                            Whether you have a project in mind or just want to chat about tech, feel free to reach out.
-                        </p>
-                        <div class="display-1 text-white opacity-25">
-                            <i class="bx bx-message-rounded-dots"></i>
-                        </div>
+                <!-- Chat Side -->
+                <div class="col-lg-6 col-md-12 mb-5 text-center bg-body-tertiary rounded chat bg-gradient py-5 text-white dashboard-img"
+                    style="background-image: url('images/images/dashboard.jpg')!important;">
+                    <div>
+                        <p class="h5">LET'S CHAT.</p><br>
+                        <p class="h5">Tell me about your project.</p>
+                        <p class="h5">Let's create something together!</p>
                     </div>
                 </div>
             </div>
@@ -762,86 +742,176 @@
 
 
     <!-- Footer Section Starts -->
-    <footer class="py-4 border-top border-secondary border-opacity-25" style="background: rgba(0,0,0,0.3);">
-        <div class="container text-center">
-            <p class="text-muted mb-0">Copyright © <span id="year"></span> Ashin Shakya. All rights reserved.</p>
+    <footer class="bg-gradient text-white">
+        <div class="container py-5">
+            <div class="row mb-5">
+                <div class="col">
+                    <h2 class="pb-4">Links</h2>
+                    <ul class="list-unstyled">
+                        <li class="pb-2"><a href="#home">Home</a></li>
+                        <li class="pb-2"><a href="#about">About</a></li>
+                        <li class="pb-2"><a href="#services">Services</a></li>
+                        <li class="pb-2"><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="col">
+                    <h2 class="pb-4">Services</h2>
+                    <ul class="list-unstyled">
+                        <li class="pb-2">Web Development</li>
+                        <li class="pb-2">Web App Development</li>
+                    </ul>
+                </div>
+
+                <div class="col">
+                    <h2 class="pb-4">Connect</h2>
+                    <div class="social-links">
+                        <a href="https://github.com/Ashinsk" class="linkedin"><i class="bx bxl-github"></i></a>
+                        <a href="https://www.linkedin.com/in/ashin-shakya" class="linkedin"><i
+                                class="bx bxl-linkedin"></i></a>
+                        <a href="https://medium.com/@ashins1997" class="linkedin"><i class="bx bxl-medium"></i></a>
+                        <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="text-center py-1">
+            <p>Copyright © 2023 All rights reserved</p>
         </div>
     </footer>
     <!-- Footer Section Ends -->
+</body>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
-        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+    crossorigin="anonymous"></script>
 
-    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3379490740151174"
+    crossorigin="anonymous"></script>
 
-    <script>
-        // Update Year
-        document.getElementById("year").innerText = new Date().getFullYear();
+<script src="https://www.twilik.com/assets/retainable/rss-embed/retainable-rss-embed.js"></script>
 
-        // Experience config
-        document.addEventListener("DOMContentLoaded", (event) => {
-            const currentYear = new Date().getFullYear();
-            const startYear = 2019;
-            const numOfYears = currentYear - startYear;
-            document.getElementById("exp-years").innerText = numOfYears;
-        })
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 
-        // Typed JS
-        document.addEventListener('DOMContentLoaded', () => {
-            new Typed("#typed-role", {
-                strings: ["Python Developer", "Django Expert", "Backend Engineer"], // Shortened for cleaner look
-                typeSpeed: 50,
-                backSpeed: 30,
-                backDelay: 2000,
-                loop: true,
-                showCursor: true,
-                cursorChar: '|',
+<script>
+    document.addEventListener("DOMContentLoaded", (event) => {
+        const currentYear = new Date().getFullYear();
+        const startYear = 2019;
+        numOfYears = currentYear - startYear;
+        document.getElementById("exp-years").innerText = numOfYears;
+    })
+</script>
+
+<script>
+    async function loadArticles() {
+        const rssFeed = 'https://medium.com/feed/@ashins1997';
+        const apiUrl = `https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(rssFeed)}`;
+
+        const defaultThumbnail = 'images/images/dashboard.jpg';
+
+        try {
+            const res = await fetch(apiUrl);
+            const data = await res.json();
+            const articles = data.items.slice(0, 6); // Top 6 articles
+            const container = document.getElementById('articles-container');
+
+            articles.forEach(article => {
+                const thumbnail = (article.thumbnail && !article.thumbnail.includes('medium.com/_'))
+                    ? article.thumbnail
+                    : defaultThumbnail;
+
+                const card = document.createElement('div');
+                card.className = 'col-md-6 col-lg-4';
+
+                card.innerHTML = `
+                    <div class="card h-100 shadow-sm border-0 rounded-4 overflow-hidden">
+                        <img src="${thumbnail}" class="card-img-top" alt="${article.title}" style="height: 150px; object-fit: cover; width: 100%;">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title fw-semibold">${article.title}</h5>
+                            <p class="card-text text-muted" style="flex-grow: 1;">${article.description.replace(/<[^>]+>/g, '').slice(0, 120)}...</p>
+                            <a href="${article.link}" target="_blank" class="btn btn-dark mt-3 px-4 py-2 rounded-pill">Read More</a>
+                        </div>
+                    </div>
+                `;
+
+                container.appendChild(card);
             });
-        });
+        } catch (err) {
+            console.error("Failed to load articles:", err);
+        }
+    }
 
-        // Load Articles
-        async function loadArticles() {
-            const rssFeed = 'https://medium.com/feed/@ashins1997';
-            const apiUrl = `https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(rssFeed)}`;
-            const defaultThumbnail = 'images/images/dashboard.jpg';
+    document.addEventListener('DOMContentLoaded', loadArticles);
+</script>
 
-            try {
-                const res = await fetch(apiUrl);
-                const data = await res.json();
-                const articles = data.items.slice(0, 3); // Display top 3
-                const container = document.getElementById('articles-container');
 
-                articles.forEach(article => {
-                    // Extract first image from content if thumbnail is missing or generic
-                    let thumbnail = (article.thumbnail && !article.thumbnail.includes('medium.com/_'))
-                        ? article.thumbnail
-                        : defaultThumbnail;
+<script>
+    async function loadRepos() {
+        const username = 'Ashinsk';  // GitHub username
+        const apiUrl = `https://api.github.com/users/${username}/repos?type=public&sort=updated`;
 
-                    const date = new Date(article.pubDate).toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' });
+        try {
+            const res = await fetch(apiUrl);
+            const repos = await res.json();
+            const container = document.getElementById('repos-container');
+            container.innerHTML = ''; // Clear any existing content
 
-                    const card = document.createElement('div');
-                    card.className = 'col-md-6 col-lg-4';
-                    card.innerHTML = `
-                        <div class="glass-card p-0 overflow-hidden h-100 d-flex flex-column">
-                            <div style="height: 200px; overflow: hidden;">
-                                <img src="${thumbnail}" class="w-100 h-100 object-fit-cover" alt="${article.title}">
-                            </div>
-                            <div class="p-4 d-flex flex-column flex-grow-1">
-                                <small class="text-accent mb-2 d-block">${date}</small>
-                                <h5 class="fw-bold mb-3 text-white">${article.title}</h5>
-                                <a href="${article.link}" target="_blank" class="btn btn-outline-light btn-sm mt-auto align-self-start rounded-pill px-4">Read Article</a>
+            // Filter out forked repositories and the "Ashinsk" repo
+            const nonForkedRepos = repos.filter(repo => !repo.fork && repo.name !== 'Ashinsk');
+
+
+            nonForkedRepos.forEach(repo => {
+                const card = document.createElement('div');
+                card.className = 'col-sm-6 col-md-4';
+
+                card.innerHTML = `
+                    <div class="card shadow-sm border-0 rounded-4 mb-4">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-start">
+                                <div>
+                                    <h5 class="card-title fw-bold mb-2">${repo.name}</h5>
+                                    <p class="card-text text-muted mb-3">
+                                        ${repo.description ? repo.description : 'No description available.'}
+                                    </p>
+                                </div>
+                                <a href="${repo.html_url}" target="_blank"
+                                    class="btn btn-dark rounded-circle d-flex align-items-center justify-content-center"
+                                    style="width: 40px; height: 40px;">
+                                    <i class="bx bxl-github fs-4 text-white"></i>
+                                </a>
                             </div>
                         </div>
-                    `;
-                    container.appendChild(card);
-                });
-            } catch (err) {
-                console.error("Failed to load articles:", err);
-            }
+                    </div>
+                `;
+
+                container.appendChild(card);
+            });
+        } catch (err) {
+            console.error("Failed to load repositories:", err);
         }
-        document.addEventListener('DOMContentLoaded', loadArticles);
-    </script>
-</body>
+    }
+
+    document.addEventListener('DOMContentLoaded', loadRepos);
+</script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        new Typed("#typed-name", {
+            strings: ["Ashin Shakya"],
+            typeSpeed: 50,
+            showCursor: false,
+        });
+
+        setTimeout(() => {
+            new Typed("#typed-role", {
+                strings: ["I'm a passionate software developer"],
+                typeSpeed: 50,
+                startDelay: 100,
+            });
+        }, 1000);
+    });
+</script>
+
 
 </html>
