@@ -299,3 +299,9 @@ section {
 .cursor-pointer {
     cursor: pointer;
 }
+
+@media (min-width: 992px) {
+    #experienceModal .modal-dialog {
+        max-width: 70%;
+    }
+}
