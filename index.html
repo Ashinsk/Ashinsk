@@ -204,6 +204,36 @@
                         </div>
                         <a href="javascript:void(0)" class="text-info text-decoration-none small stretched-link">Show
                             Detail <i class='bx bx-right-arrow-alt'></i></a>
+
+                        <!-- Hidden Detail Content -->
+                        <div class="d-none detail-content">
+                            <p>At Khalti, a leading digital wallet in Nepal, I work as a core backend developer
+                                responsible for high-traffic financial transactions and system stability.</p>
+                            <h6 class="text-info mt-3">Key Responsibilities:</h6>
+                            <ul class="ps-3">
+                                <li class="mb-2">
+                                    Owned end-to-end system design and delivery for large-scale applications, overseeing
+                                    architecture, development, deployment, and post-production operations to ensure
+                                    reliability, scalability, and maintainability.
+                                </li>
+                                <li class="mb-2">
+                                    Led and mentored cross-functional engineering teams (3–10 engineers) through system
+                                    design, code reviews, and execution planning, aligning technical delivery with
+                                    business and regulatory priorities.
+                                </li>
+                                <li class="mb-2">
+                                    Designed and operated high-throughput, fault-tolerant systems, including idempotent
+                                    transaction flows, duplicate handling, and failure recovery, reliably processing
+                                    50K+ transactions/hour while reducing financial and operational risk.
+                                </li>
+                                <li class="mb-2">
+                                    Served as DRI for mission-critical production systems, leading incident response,
+                                    root-cause analysis, and long-term improvements; owned large-scale user migrations
+                                    (5M+ users, near-zero downtime, zero data loss) and executed Python/Django upgrades
+                                    to improve security, performance, and platform longevity.
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
 
@@ -235,6 +265,36 @@
                         </div>
                         <a href="javascript:void(0)" class="text-info text-decoration-none small stretched-link">Show
                             Detail <i class='bx bx-right-arrow-alt'></i></a>
+
+                        <!-- Hidden Detail Content -->
+                        <div class="d-none detail-content">
+                            <p>Pathway Technologies was where I started my professional journey, taking full ownership
+                                of web projects from concept to deployment.</p>
+                            <h6 class="text-info mt-3">Key Highlights:</h6>
+                            <ul class="ps-3">
+                                <li class="mb-2">
+                                    Led the backend architecture and system integration of GeoKrishi, a nationwide
+                                    agriculture-based mobile platform deployed across Nepal, onboarding 12,000+ farmers
+                                    across 100+ municipalities and supporting farmers and local governments at scale.
+                                </li>
+                                <li class="mb-2">
+                                    Drove daily engagement of ~1,000 active users, delivering ~2,000 real-time
+                                    notifications
+                                    per day for crop actions, weather alerts, and market price updates using Firebase.
+                                </li>
+                                <li class="mb-2">
+                                    Built core platform capabilities including farm and crop management, weather and
+                                    market data access, a crop knowledge base, and geo-location–based map analysis for
+                                    municipalities and administrators to coordinate and support farmers.
+
+                                </li>
+                                <li class="mb-2">
+                                    Owned and built scalable backend services using Python, Django, Django REST
+                                    Framework, and PostgreSQL, optimizing APIs and queries for high-traffic,
+                                    multi-stakeholder workflows while maintaining system reliability and code quality.
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -653,13 +713,17 @@
                     const company = card.querySelector('a').innerText;
                     const companyLink = card.querySelector('a').getAttribute('href');
                     const date = card.querySelector('.badge').innerText;
-                    const list = card.querySelector('ul').innerHTML;
+
+                    // Fetch content from hidden div instead of the visible list
+                    const detailContent = card.querySelector('.detail-content').innerHTML;
                     const techStack = card.querySelector('.d-flex.flex-wrap').innerHTML;
 
                     modalRole.innerText = role;
                     modalCompany.innerHTML = `<a href="${companyLink}" target="_blank" class="text-decoration-none text-white hover-info">${company}</a>`;
                     modalDate.innerText = date;
-                    modalDescription.innerHTML = `<ul class="ps-3">${list}</ul>`;
+
+                    // Populate modal with the detailed content
+                    modalDescription.innerHTML = detailContent;
                     modalTech.innerHTML = techStack;
 
                     modal.show();
