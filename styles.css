@@ -305,3 +305,401 @@ section {
         max-width: 70%;
     }
 }
+
+.arch-section {
+    padding: 0px 0px 0xp 100px;
+    /* Removed conflicting background to let body gradient show */
+    text-align: center;
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+.arch-title {
+    font-size: 42px;
+    margin-bottom: 60px;
+    letter-spacing: 2px;
+    font-weight: 600;
+}
+
+.arch-container-wrapper {
+    width: 100%;
+    overflow-x: auto;
+    padding: 0 250px;
+    /* horizontal padding now works */
+}
+
+.arch-container {
+    position: relative;
+    width: max-content;
+    /* automatically grows with nodes */
+    min-width: 100%;
+    /* at least full viewport width */
+    height: 500px;
+    margin: 0 auto;
+    /* center container horizontally */
+    overflow-x: auto;
+    /* scroll horizontally if content overflows */
+    padding: 20px 40px;
+    /* top/bottom 20px, left/right 40px */
+
+    border: 2px dashed #fcbf49;
+    border-radius: 14px;
+
+    --node-width: 180px;
+    --row-1-top: 80px;
+    --row-2-top: 360px;
+
+    --start-left: 40px;
+    --column-gap: 185px;
+}
+
+/* Optional: make the parent section scrollable */
+.arch-section {
+    width: 100%;
+    overflow-x: auto;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+    .arch-container {
+        height: 700px;
+        padding: 20px 30px;
+        /* reduce horizontal padding on smaller screens */
+    }
+}
+
+@media (max-width: 992px) {
+    .arch-container {
+        height: 600px;
+        padding: 15px 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .arch-container {
+        height: 500px;
+        padding: 10px 15px;
+    }
+}
+
+/* Global Arch Container Styling with Animated Border */
+.arch-container {
+    /* Animated Border for Arch Container */
+    position: relative;
+    background: rgba(255, 255, 255, 0.02);
+    /* Slight bg */
+    border-radius: 20px;
+
+    /* Dashed Animated Border */
+    background-image:
+        linear-gradient(90deg, rgba(255, 255, 255, 0.2) 50%, transparent 50%),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.2) 50%, transparent 50%),
+        linear-gradient(0deg, rgba(255, 255, 255, 0.2) 50%, transparent 50%),
+        linear-gradient(0deg, rgba(255, 255, 255, 0.2) 50%, transparent 50%);
+    background-repeat: repeat-x, repeat-x, repeat-y, repeat-y;
+    background-size: 20px 2px, 20px 2px, 2px 20px, 2px 20px;
+    background-position: 0px 0px, 100% 100%, 0px 100%, 100% 0px;
+    animation: border-dance 60s linear infinite;
+    border: none;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 480px) {
+    .arch-container {
+        height: 400px;
+        padding: 5px 10px;
+    }
+}
+
+/* Style the node like a Docker container with Animated Border */
+.docker-node {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    padding: 2px;
+
+    /* Animated Dashed Border using Gradients */
+    background-image:
+        linear-gradient(90deg, #188ed6 50%, transparent 50%),
+        linear-gradient(90deg, #188ed6 50%, transparent 50%),
+        linear-gradient(0deg, #188ed6 50%, transparent 50%),
+        linear-gradient(0deg, #188ed6 50%, transparent 50%);
+    background-repeat: repeat-x, repeat-x, repeat-y, repeat-y;
+    background-size: 15px 2px, 15px 2px, 2px 15px, 2px 15px;
+    background-position: 0px 0px, 100% 100%, 0px 100%, 100% 0px;
+    border: none;
+    /* Remove standard border */
+    animation: border-dance 40s linear infinite;
+
+    border-radius: 14px;
+    font-weight: bold;
+    box-sizing: border-box;
+    width: 95%;
+    height: 90%;
+    pointer-events: none;
+    position: absolute;
+    top: 5;
+    left: 5;
+}
+
+@keyframes border-dance {
+    0% {
+        background-position: 0px 0px, 100% 100%, 0px 100%, 100% 0px;
+    }
+
+    100% {
+        background-position: 300px 0px, -200px 100%, 0px -200px, 100% 300px;
+    }
+}
+
+/* Glass Nodes */
+.arch-node {
+    position: absolute;
+    width: 180px;
+    height: 90px;
+    /* Matching global glass card style */
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: 0.4s;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    animation: float 6s ease-in-out infinite;
+    z-index: 2;
+}
+
+.arch-node:hover {
+    transform: scale(1.1);
+    border-color: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 0 45px rgba(59, 130, 246, 0.6);
+    /* Primary color glow */
+}
+
+/* ... existing styles ... */
+
+/* Cloud Path Animation */
+#cloud-path {
+    transition: all 0.3s ease;
+    cursor: pointer;
+    filter: drop-shadow(0 0 10px rgba(59, 130, 246, 0.2));
+    stroke-dasharray: 15;
+    animation: dashMove 60s linear infinite;
+}
+
+#cloud-path:hover {
+    stroke: rgba(59, 130, 246, 0.8);
+    /* Blue glow */
+    stroke-width: 4;
+    filter: drop-shadow(0 0 20px rgba(59, 130, 246, 0.6));
+}
+
+/* Animated Lines */
+.arch-lines line,
+.arch-lines path {
+    stroke: rgba(255, 255, 255, 0.3);
+    stroke-width: 2;
+    stroke-dasharray: 10;
+    stroke-linecap: round;
+    fill: none;
+    animation: dashMove 30s linear infinite;
+}
+
+.node-title {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+/* Node Positions - Perfectly Centered in 1000px */
+/* Center X = 500. Node Width = 180. Center-Left = 410. */
+/* Gap = 190. */
+
+#frontend {
+    top: var(--row-1-top);
+    left: calc(var(--start-left) + (0 * var(--column-gap)));
+}
+
+#reverse-proxy {
+    top: var(--row-1-top);
+    left: calc(var(--start-left) + (2 * var(--column-gap)));
+}
+
+#backend {
+    top: var(--row-1-top);
+    left: calc(var(--start-left) + (4 * var(--column-gap)));
+}
+
+#worker {
+    top: var(--row-1-top);
+    left: calc(var(--start-left) + (6 * var(--column-gap)));
+}
+
+#database {
+    top: var(--row-2-top);
+    left: calc(var(--start-left) + (4 * var(--column-gap)));
+}
+
+#cache {
+    top: var(--row-2-top);
+    left: calc(var(--start-left) + (6 * var(--column-gap)));
+}
+
+#devops {
+    top: var(--row-2-top);
+    left: calc(var(--start-left) + (0 * var(--column-gap)));
+}
+
+/* Architecture Groups */
+.arch-group {
+    position: absolute;
+    border: 2px dashed rgba(255, 255, 255, 0.15);
+    border-radius: 20px;
+    pointer-events: none;
+    /* Let clicks pass through */
+    z-index: 0;
+}
+
+.group-label {
+    position: absolute;
+    top: -12px;
+    left: 20px;
+    background: #1e293b;
+    /* Match bg color approx - will blend or need backdrop filter */
+    padding: 0 10px;
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.cloud-group {
+    top: 10px;
+    left: 10px;
+    width: 980px;
+    height: 480px;
+    border-color: rgba(59, 130, 246, 0.3);
+    /* Blue tint for Cloud */
+}
+
+.docker-group {
+    top: 40px;
+    left: 20px;
+    width: 960px;
+    height: 170px;
+    border-color: rgba(16, 185, 129, 0.3);
+    /* Green tint for Docker */
+}
+
+/* Floating Animation */
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-15px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+/* Animated Lines */
+.arch-lines {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    pointer-events: none;
+}
+
+/* Apply same style to BOTH lines and curves */
+.arch-lines line,
+.arch-lines path {
+    stroke: rgba(255, 255, 255, 0.3);
+    stroke-width: 2;
+    stroke-dasharray: 10;
+    stroke-linecap: round;
+    fill: none;
+    animation: dashMove 30s linear infinite;
+}
+
+
+@keyframes dashMove {
+    from {
+        stroke-dashoffset: 0;
+    }
+
+    to {
+        stroke-dashoffset: -1000;
+    }
+}
+
+/* Creative Tooltip Styles */
+.tooltip-content {
+    text-align: center;
+    padding: 8px;
+}
+
+.tooltip-title {
+    font-family: var(--font-heading);
+    font-weight: 600;
+    font-size: 0.9rem;
+    margin-bottom: 12px;
+    color: #fff;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 8px;
+    display: block;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.tooltip-icons {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    justify-items: center;
+}
+
+.tooltip-icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 65px;
+    height: 65px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 8px;
+    transition: all 0.3s ease;
+}
+
+.tooltip-icon:hover {
+    transform: translateY(-3px);
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.tooltip-icon img {
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
+    margin-bottom: 6px;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+}
+
+.tooltip-icon span {
+    font-size: 0.7rem;
+    color: var(--text-muted);
+    font-weight: 500;
+}
