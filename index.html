@@ -389,6 +389,9 @@
 
                         <!-- Backend → Database -->
                         <line id="line-backend-database" class="arch-line" />
+                        
+                        <!-- Worker → Database -->
+                        <line id="line-worker-database" class="arch-line" />
 
                         <!-- Worker → Cache -->
                         <line id="line-worker-cache" class="arch-line" />
@@ -702,6 +705,7 @@
             connectNodes("reverse-proxy", "backend", "line-proxy-backend");
             connectNodes("backend", "worker", "line-backend-worker");
             connectNodes("backend", "database", "line-backend-database");
+            connectNodes("worker", "database", "line-worker-database");
             connectNodes("worker", "cache", "line-worker-cache");
             connectNodes("backend", "cache", "line-backend-cache");
         }
