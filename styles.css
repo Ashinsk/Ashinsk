@@ -335,7 +335,7 @@ section {
     /* automatically grows with nodes */
     min-width: 100%;
     /* at least full viewport width */
-    height: 500px;
+    height: 600px;
     margin: 0 auto;
     /* center container horizontally */
     overflow-x: auto;
@@ -347,8 +347,9 @@ section {
     border-radius: 14px;
 
     --node-width: 180px;
-    --row-1-top: 80px;
-    --row-2-top: 360px;
+    --row-1-top: 60px;
+    --row-2-top: 240px;
+    --row-3-top: 420px;
 
     --start-left: 40px;
     --column-gap: 185px;
@@ -467,11 +468,16 @@ section {
     display: flex;
     align-items: center;
     justify-content: center;
-    cursor: pointer;
+    cursor: grab;
+    user-select: none;
     transition: 0.4s;
     box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
     animation: float 6s ease-in-out infinite;
     z-index: 2;
+}
+
+.arch-node:active {
+    cursor: grabbing;
 }
 
 .arch-node:hover {
@@ -520,37 +526,42 @@ section {
 /* Gap = 190. */
 
 #frontend {
-    top: var(--row-1-top);
+    top: var(--row-2-top);
     left: calc(var(--start-left) + (0 * var(--column-gap)));
 }
 
 #reverse-proxy {
-    top: var(--row-1-top);
+    top: var(--row-2-top);
     left: calc(var(--start-left) + (2 * var(--column-gap)));
 }
 
 #backend {
-    top: var(--row-1-top);
+    top: var(--row-2-top);
     left: calc(var(--start-left) + (4 * var(--column-gap)));
 }
 
 #worker {
+    top: var(--row-2-top);
+    left: calc(var(--start-left) + (6 * var(--column-gap)));
+}
+
+#monitoring {
     top: var(--row-1-top);
     left: calc(var(--start-left) + (6 * var(--column-gap)));
 }
 
 #database {
-    top: var(--row-2-top);
+    top: var(--row-3-top);
     left: calc(var(--start-left) + (4 * var(--column-gap)));
 }
 
 #cache {
-    top: var(--row-2-top);
+    top: var(--row-3-top);
     left: calc(var(--start-left) + (6 * var(--column-gap)));
 }
 
 #devops {
-    top: var(--row-2-top);
+    top: var(--row-3-top);
     left: calc(var(--start-left) + (0 * var(--column-gap)));
 }
 
@@ -702,4 +713,13 @@ section {
     font-size: 0.7rem;
     color: var(--text-muted);
     font-weight: 500;
+}
+
+.tech-intro {
+    max-width: 720px;
+    margin: 15px auto 40px;
+    text-align: center;
+    color: #9ca3af;
+    font-size: 16px;
+    line-height: 1.7;
 }

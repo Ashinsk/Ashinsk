@@ -335,6 +335,11 @@
     <section id="tools" class="py-5">
         <div class="container">
             <h2 class="section-title">My Tech Stack</h2>
+            <p class="text-light opacity-75 mb-4 ps-3 pb-4">
+                This architecture showcases the technologies I work with across the full software stack — from frontend
+                interfaces to backend systems, infrastructure, and cloud deployment.
+                Hover over each node to explore the specific tools and frameworks I use in real-world projects.
+            </p>
         </div>
 
         <section id="architecture" class="arch-section">
@@ -344,7 +349,8 @@
                     <!-- Frontend -->
                     <div class="arch-node" id="frontend">
                         <div class="node-title">
-                            Frontend</div>
+                            Frontend
+                        </div>
                     </div>
 
                     <div class="arch-node" id="reverse-proxy">
@@ -359,6 +365,10 @@
                     <!-- Worker -->
                     <div class="arch-node" id="worker">
                         <div class="node-title">Async Workers</div>
+                    </div>
+
+                    <div class="arch-node" id="monitoring">
+                        <div class="node-title">Monitoring & Logging</div>
                     </div>
 
                     <!-- Database -->
@@ -389,12 +399,21 @@
 
                         <!-- Backend → Database -->
                         <line id="line-backend-database" class="arch-line" />
-                        
+
                         <!-- Worker → Database -->
                         <line id="line-worker-database" class="arch-line" />
 
                         <!-- Worker → Cache -->
                         <line id="line-worker-cache" class="arch-line" />
+
+                        <!-- Backend → Monitoring -->
+                        <line id="line-backend-monitoring" class="arch-line" />
+
+                        <!-- Database → Monitoring -->
+                        <line id="line-database-monitoring" class="arch-line" />
+
+                        <!-- Async Worker → Monitoring -->
+                        <line id="line-worker-monitoring" class="arch-line" />
 
                         <!-- Backend → Cache -->
                         <line id="line-backend-cache" class="arch-line" />
@@ -658,6 +677,9 @@
                 { name: 'Linux', icon: 'linux-icon.svg' },
                 { name: 'Git', icon: 'git.svg' }
             ],
+            monitoring: [
+                { name: 'Sentry', icon: 'sentryio-icon.svg' },
+            ]
         };
 
         const tippyConfig = {
@@ -674,6 +696,7 @@
         tippy('#database', { content: createTooltipContent('Data Persistence', techData.database), ...tippyConfig });
         tippy('#cache', { content: createTooltipContent('Caching Layer', techData.cache), ...tippyConfig });
         tippy('#devops', { content: createTooltipContent('Cloud & DevOps', techData.devops), ...tippyConfig });
+        tippy('#monitoring', { content: createTooltipContent('Monitoring & Observability', techData.monitoring), ...tippyConfig });
     </script>
 
     <script>
@@ -682,22 +705,25 @@
             const end = document.getElementById(endId);
             const line = document.getElementById(lineId);
 
-            const container = document.querySelector(".arch-container");
+            const svg = document.querySelector(".arch-lines");
 
-            const cRect = container.getBoundingClientRect();
-            const sRect = start.getBoundingClientRect();
-            const eRect = end.getBoundingClientRect();
+            function getSVGPoint(element) {
+                const rect = element.getBoundingClientRect();
 
-            const x1 = sRect.left + sRect.width / 2 - cRect.left;
-            const y1 = sRect.top + sRect.height / 2 - cRect.top;
+                const point = svg.createSVGPoint();
+                point.x = rect.left + rect.width / 2;
+                point.y = rect.top + rect.height / 2;
 
-            const x2 = eRect.left + eRect.width / 2 - cRect.left;
-            const y2 = eRect.top + eRect.height / 2 - cRect.top;
+                return point.matrixTransform(svg.getScreenCTM().inverse());
+            }
 
-            line.setAttribute("x1", x1);
-            line.setAttribute("y1", y1);
-            line.setAttribute("x2", x2);
-            line.setAttribute("y2", y2);
+            const p1 = getSVGPoint(start);
+            const p2 = getSVGPoint(end);
+
+            line.setAttribute("x1", p1.x);
+            line.setAttribute("y1", p1.y);
+            line.setAttribute("x2", p2.x);
+            line.setAttribute("y2", p2.y);
         }
 
         function drawLines() {
@@ -707,12 +733,60 @@
             connectNodes("backend", "database", "line-backend-database");
             connectNodes("worker", "database", "line-worker-database");
             connectNodes("worker", "cache", "line-worker-cache");
+            connectNodes("worker", "monitoring", "line-worker-monitoring");
+            connectNodes("backend", "monitoring", "line-backend-monitoring");
+            connectNodes("database", "monitoring", "line-database-monitoring");
             connectNodes("backend", "cache", "line-backend-cache");
         }
 
         window.addEventListener("load", drawLines);
         window.addEventListener("resize", drawLines);
 
+    </script>
+
+    <script>
+        const container = document.querySelector(".arch-container");
+
+        let activeNode = null;
+        let offsetX = 0;
+        let offsetY = 0;
+
+        /* ===== Enable dragging for all nodes ===== */
+        document.querySelectorAll(".arch-node").forEach(node => {
+
+            node.addEventListener("mousedown", (e) => {
+                activeNode = node;
+
+                const rect = node.getBoundingClientRect();
+                offsetX = e.clientX - rect.left;
+                offsetY = e.clientY - rect.top;
+            });
+
+        });
+
+        /* ===== Move node ===== */
+        window.addEventListener("mousemove", (e) => {
+            if (!activeNode) return;
+
+            const containerRect = container.getBoundingClientRect();
+
+            let x = e.clientX - containerRect.left - offsetX;
+            let y = e.clientY - containerRect.top - offsetY;
+
+            /* Keep inside container */
+            x = Math.max(0, Math.min(x, container.clientWidth - activeNode.offsetWidth));
+            y = Math.max(0, Math.min(y, container.clientHeight - activeNode.offsetHeight));
+
+            activeNode.style.left = x + "px";
+            activeNode.style.top = y + "px";
+
+            drawLines(); // update connections live
+        });
+
+        /* ===== Release ===== */
+        window.addEventListener("mouseup", () => {
+            activeNode = null;
+        });
     </script>
 </body>
 
