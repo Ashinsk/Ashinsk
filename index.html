@@ -368,47 +368,69 @@
         </div>
 
         <section id="architecture" class="arch-section">
-            <div class=" arch-container-wrapper">
-                <div class="arch-container">
+            <div class="arch-container-wrapper">
+                <div class="glass-card arch-container">
 
                     <!-- Frontend -->
                     <div class="arch-node" id="frontend">
-                        <div class="node-title">
-                            Frontend
+                        <div class="node-content-wrapper">
+                            <div class="node-title">Frontend</div>
+                            <div class="node-slider" id="slider-frontend"></div>
                         </div>
                     </div>
 
                     <div class="arch-node" id="reverse-proxy">
-                        <div class="node-title">Reverse Proxy</div>
+                        <div class="node-content-wrapper">
+                            <div class="node-title">Reverse Proxy</div>
+                            <div class="node-slider" id="slider-reverse-proxy"></div>
+                        </div>
                     </div>
 
                     <!-- Backend -->
                     <div class="arch-node" id="backend">
-                        <div class="node-title">Backend</div>
+                        <div class="node-content-wrapper">
+                            <div class="node-title">Backend</div>
+                            <div class="node-slider" id="slider-backend"></div>
+                        </div>
                     </div>
 
                     <!-- Worker -->
                     <div class="arch-node" id="worker">
-                        <div class="node-title">Async Workers</div>
+                        <div class="node-content-wrapper">
+                            <div class="node-title">Async Workers</div>
+                            <div class="node-slider" id="slider-worker"></div>
+                        </div>
                     </div>
 
                     <div class="arch-node" id="monitoring">
-                        <div class="node-title">Monitoring & Logging</div>
+                        <div class="node-content-wrapper">
+                            <div class="node-title">Monitoring & Logging</div>
+                            <div class="node-slider" id="slider-monitoring"></div>
+                        </div>
                     </div>
 
                     <!-- Database -->
                     <div class="arch-node" id="database">
-                        <div class="node-title">Database</div>
+                        <div class="node-content-wrapper">
+                            <div class="node-title">Database</div>
+                            <div class="node-slider" id="slider-database"></div>
+                        </div>
                     </div>
 
                     <!-- DevOps -->
                     <div class="arch-node" id="devops">
-                        <div class="node-title">Cloud & DevOps</div>
+                        <div class="node-content-wrapper">
+                            <div class="node-title">Cloud & DevOps</div>
+                            <div class="node-slider" id="slider-devops"></div>
+                        </div>
                     </div>
 
                     <!-- Cache -->
                     <div class="arch-node" id="cache">
-                        <div class="node-title">Cache / Queue</div>
+                        <div class="node-content-wrapper">
+                            <div class="node-title">Cache / Queue</div>
+                            <div class="node-slider" id="slider-cache"></div>
+                        </div>
                     </div>
 
                     <!-- SVG Lines for Dynamic Connections -->
@@ -451,10 +473,11 @@
     <!-- Contact Section -->
     <section id="contact" class="py-5 mb-5">
         <div class="container">
+            <h2 class="section-title">Get in Touch</h2>
+
             <div class="row g-5">
                 <div class="col-lg-6">
                     <div class="glass-card h-100 p-4">
-                        <h2 class="mb-2">Get in Touch</h2>
                         <p class="text-muted mb-4">Have a project in mind or just want to say hi?</p>
 
                         <form id="my-form" method="POST" action="https://formspree.io/f/xayzdgew">
@@ -686,8 +709,8 @@
                 { name: 'Nginx', icon: 'nginx-icon.svg' },
             ],
             database: [
-                { name: 'Postgres', icon: 'postgres.png' },
-                { name: 'Mongo', icon: 'mongodb.png' },
+                { name: 'Postgresql', icon: 'postgres.png' },
+                { name: 'MongoDB', icon: 'mongodbbrand.png' },
                 { name: 'MySQL', icon: 'mysql-ar.svg' },
                 { name: 'MariaDB', icon: 'mariadb-ar.svg' },
             ],
@@ -722,6 +745,41 @@
         tippy('#cache', { content: createTooltipContent('Caching Layer', techData.cache), ...tippyConfig });
         tippy('#devops', { content: createTooltipContent('Cloud & DevOps', techData.devops), ...tippyConfig });
         tippy('#monitoring', { content: createTooltipContent('Monitoring & Observability', techData.monitoring), ...tippyConfig });
+
+        // Populate Mini Sliders
+        const populateSliders = () => {
+            const mapping = {
+                'slider-frontend': 'frontend',
+                'slider-backend': 'backend',
+                'slider-worker': 'worker',
+                'slider-reverse-proxy': 'reverse_proxy',
+                'slider-database': 'database',
+                'slider-cache': 'cache',
+                'slider-devops': 'devops',
+                'slider-monitoring': 'monitoring'
+            };
+
+            Object.entries(mapping).forEach(([sliderId, dataKey]) => {
+                const slider = document.getElementById(sliderId);
+                if (!slider) return;
+
+                const techs = techData[dataKey];
+                const track = document.createElement('div');
+                track.className = 'slider-track';
+
+                // Create icons (duplicated for seamless loop)
+                const icons = techs.map(tech => `
+                    <div class="slider-item">
+                        <img src="images/skills/${tech.icon}" alt="${tech.name}" title="${tech.name}">
+                    </div>
+                `).join('');
+
+                track.innerHTML = icons + icons; // Duplicate for smooth looping
+                slider.appendChild(track);
+            });
+        };
+
+        populateSliders();
     </script>
 
     <script>
@@ -776,7 +834,6 @@
         let offsetX = 0;
         let offsetY = 0;
 
-        /* ===== Enable dragging for all nodes ===== */
         document.querySelectorAll(".arch-node").forEach(node => {
 
             node.addEventListener("mousedown", (e) => {
@@ -789,7 +846,6 @@
 
         });
 
-        /* ===== Move node ===== */
         window.addEventListener("mousemove", (e) => {
             if (!activeNode) return;
 
@@ -808,7 +864,6 @@
             drawLines(); // update connections live
         });
 
-        /* ===== Release ===== */
         window.addEventListener("mouseup", () => {
             activeNode = null;
         });

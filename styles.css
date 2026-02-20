@@ -325,7 +325,7 @@ section {
 .arch-container-wrapper {
     width: 100%;
     overflow-x: auto;
-    padding: 0 250px;
+    padding: 20px 250px;
     /* horizontal padding now works */
 }
 
@@ -335,7 +335,7 @@ section {
     /* automatically grows with nodes */
     min-width: 100%;
     /* at least full viewport width */
-    height: 600px;
+    height: 570px;
     margin: 0 auto;
     /* center container horizontally */
     overflow-x: auto;
@@ -343,7 +343,6 @@ section {
     padding: 20px 40px;
     /* top/bottom 20px, left/right 40px */
 
-    border: 2px dashed #fcbf49;
     border-radius: 14px;
 
     --node-width: 180px;
@@ -393,11 +392,11 @@ section {
     border-radius: 20px;
 
     /* Dashed Animated Border */
-    background-image:
+    /* background-image:
         linear-gradient(90deg, rgba(255, 255, 255, 0.2) 50%, transparent 50%),
         linear-gradient(90deg, rgba(255, 255, 255, 0.2) 50%, transparent 50%),
         linear-gradient(0deg, rgba(255, 255, 255, 0.2) 50%, transparent 50%),
-        linear-gradient(0deg, rgba(255, 255, 255, 0.2) 50%, transparent 50%);
+        linear-gradient(0deg, rgba(255, 255, 255, 0.2) 50%, transparent 50%); */
     background-repeat: repeat-x, repeat-x, repeat-y, repeat-y;
     background-size: 20px 2px, 20px 2px, 2px 20px, 2px 20px;
     background-position: 0px 0px, 100% 100%, 0px 100%, 100% 0px;
@@ -461,7 +460,9 @@ section {
     width: 180px;
     height: 90px;
     /* Matching global glass card style */
-    background: rgba(255, 255, 255, 0.05);
+    /* More opaque background to hide connection lines behind the node */
+    background: #131b2e;
+
     backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 16px;
@@ -517,8 +518,85 @@ section {
 }
 
 .node-title {
-    font-size: 18px;
-    font-weight: 500;
+    font-size: 15px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+/* Mini Slider Styles */
+.node-content-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 0 15px;
+    width: 100%;
+    height: 100%;
+}
+
+.node-slider {
+    width: 74px;
+    /* Exactly (22px icon + 15px gap) * 2 */
+    height: 32px;
+    overflow: hidden;
+    position: relative;
+    mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
+    -webkit-mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
+
+    /* center content inside slider */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slider-track {
+    display: flex;
+    align-items: center;
+    width: max-content;
+    animation: slide-tech 10s linear infinite;
+    will-change: transform;
+}
+
+.slider-item {
+    width: 37px;
+    /* 22px icon + 15px gap */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.slider-track img {
+    height: 22px;
+    width: 22px;
+    object-fit: contain;
+    filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.2));
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+.arch-node:hover .slider-track img {
+    opacity: 1;
+}
+
+.arch-node:hover .slider-track {
+    animation-play-state: paused;
+}
+
+@keyframes slide-tech {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+/* Adjust Node Size for Slider */
+.arch-node {
+    width: 230px;
+    /* Slightly wider to accommodate slider */
+    height: 60px;
 }
 
 /* Node Positions - Perfectly Centered in 1000px */
