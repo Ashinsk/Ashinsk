@@ -264,18 +264,6 @@ section {
     color: var(--text-muted) !important;
 }
 
-/* Mobile Adjustments */
-@media (max-width: 768px) {
-    .glass-card {
-        padding: 1.5rem;
-    }
-
-    .hero-glow {
-        width: 300px;
-        height: 300px;
-    }
-}
-
 /* Modal Styles */
 .modal-content.glass-card {
     background: rgba(15, 23, 42, 0.95);
@@ -300,14 +288,8 @@ section {
     cursor: pointer;
 }
 
-@media (min-width: 992px) {
-    #experienceModal .modal-dialog {
-        max-width: 70%;
-    }
-}
-
 .arch-section {
-    padding: 0px 0px 0xp 100px;
+    padding: 0;
     /* Removed conflicting background to let body gradient show */
     text-align: center;
     color: white;
@@ -326,7 +308,6 @@ section {
     width: 100%;
     overflow-x: auto;
     padding: 20px 250px;
-    /* horizontal padding now works */
 }
 
 .arch-container {
@@ -360,29 +341,6 @@ section {
     overflow-x: auto;
 }
 
-/* Responsive adjustments */
-@media (max-width: 1200px) {
-    .arch-container {
-        height: 700px;
-        padding: 20px 30px;
-        /* reduce horizontal padding on smaller screens */
-    }
-}
-
-@media (max-width: 992px) {
-    .arch-container {
-        height: 600px;
-        padding: 15px 20px;
-    }
-}
-
-@media (max-width: 768px) {
-    .arch-container {
-        height: 500px;
-        padding: 10px 15px;
-    }
-}
-
 /* Global Arch Container Styling with Animated Border */
 .arch-container {
     /* Animated Border for Arch Container */
@@ -403,13 +361,6 @@ section {
     animation: border-dance 60s linear infinite;
     border: none;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-}
-
-@media (max-width: 480px) {
-    .arch-container {
-        height: 400px;
-        padding: 5px 10px;
-    }
 }
 
 /* Style the node like a Docker container with Animated Border */
@@ -875,4 +826,62 @@ section {
 
 .stack-list li strong {
     color: #fff;
+}
+
+
+/* Responsive adjustments */
+@media (max-width: 1400px) {
+    .arch-container-wrapper {
+        padding: 20px 100px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .arch-container {
+        height: 700px;
+        padding: 20px 30px;
+        /* reduce horizontal padding on smaller screens */
+    }
+}
+
+@media (max-width: 992px) {
+    .arch-container-wrapper {
+        padding: 20px 50px;
+    }
+
+    .arch-container {
+        height: 600px;
+        padding: 15px 20px;
+    }
+
+    #experienceModal .modal-dialog {
+        max-width: 70%;
+    }
+}
+
+@media (max-width: 768px) {
+    .arch-container-wrapper {
+        padding: 20px 15px;
+    }
+
+    .arch-container {
+        height: 500px;
+        padding: 10px 15px;
+    }
+
+    .glass-card {
+        padding: 1.5rem;
+    }
+
+    .hero-glow {
+        width: 300px;
+        height: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    .arch-container {
+        height: 400px;
+        padding: 5px 10px;
+    }
 }
