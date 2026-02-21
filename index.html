@@ -796,25 +796,19 @@
             const end = document.getElementById(endId);
             const line = document.getElementById(lineId);
 
-            const svg = document.querySelector(".arch-lines");
+            if (!start || !end || !line) return;
 
-            function getSVGPoint(element) {
-                const rect = element.getBoundingClientRect();
+            // Using offsetLeft and offsetTop relative to .arch-container
+            // This is more robust for scrollable containers than getBoundingClientRect
+            const x1 = start.offsetLeft + start.offsetWidth / 2;
+            const y1 = start.offsetTop + start.offsetHeight / 2;
+            const x2 = end.offsetLeft + end.offsetWidth / 2;
+            const y2 = end.offsetTop + end.offsetHeight / 2;
 
-                const point = svg.createSVGPoint();
-                point.x = rect.left + rect.width / 2;
-                point.y = rect.top + rect.height / 2;
-
-                return point.matrixTransform(svg.getScreenCTM().inverse());
-            }
-
-            const p1 = getSVGPoint(start);
-            const p2 = getSVGPoint(end);
-
-            line.setAttribute("x1", p1.x);
-            line.setAttribute("y1", p1.y);
-            line.setAttribute("x2", p2.x);
-            line.setAttribute("y2", p2.y);
+            line.setAttribute("x1", x1);
+            line.setAttribute("y1", y1);
+            line.setAttribute("x2", x2);
+            line.setAttribute("y2", y2);
         }
 
         function drawLines() {
@@ -843,24 +837,29 @@
         let offsetY = 0;
 
         document.querySelectorAll(".arch-node").forEach(node => {
-
-            node.addEventListener("mousedown", (e) => {
+            const startDrag = (clientX, clientY) => {
                 activeNode = node;
-
                 const rect = node.getBoundingClientRect();
-                offsetX = e.clientX - rect.left;
-                offsetY = e.clientY - rect.top;
-            });
+                offsetX = clientX - rect.left;
+                offsetY = clientY - rect.top;
+            };
 
+            node.addEventListener("mousedown", (e) => startDrag(e.clientX, e.clientY));
+            node.addEventListener("touchstart", (e) => {
+                const touch = e.touches[0];
+                startDrag(touch.clientX, touch.clientY);
+                // Prevent scrolling when dragging
+                if (e.cancelable) e.preventDefault();
+            }, { passive: false });
         });
 
-        window.addEventListener("mousemove", (e) => {
+        const handleMove = (clientX, clientY) => {
             if (!activeNode) return;
 
             const containerRect = container.getBoundingClientRect();
 
-            let x = e.clientX - containerRect.left - offsetX;
-            let y = e.clientY - containerRect.top - offsetY;
+            let x = clientX - containerRect.left - offsetX;
+            let y = clientY - containerRect.top - offsetY;
 
             /* Keep inside container */
             x = Math.max(0, Math.min(x, container.clientWidth - activeNode.offsetWidth));
@@ -870,11 +869,23 @@
             activeNode.style.top = y + "px";
 
             drawLines(); // update connections live
-        });
+        };
 
-        window.addEventListener("mouseup", () => {
+        window.addEventListener("mousemove", (e) => handleMove(e.clientX, e.clientY));
+        window.addEventListener("touchmove", (e) => {
+            if (!activeNode) return;
+            const touch = e.touches[0];
+            handleMove(touch.clientX, touch.clientY);
+            if (e.cancelable) e.preventDefault();
+        }, { passive: false });
+
+        const endDrag = () => {
             activeNode = null;
-        });
+        };
+
+        window.addEventListener("mouseup", endDrag);
+        window.addEventListener("touchend", endDrag);
+        window.addEventListener("touchcancel", endDrag);
     </script>
 </body>
 
