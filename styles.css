@@ -316,6 +316,8 @@ section {
     /* automatically grows with nodes */
     min-width: 100%;
     /* at least full viewport width */
+    min-width: 1450px;
+    /* Ensure SVG spans all nodes to prevent clipping on mobile */
     height: 570px;
     margin: 0 auto;
     /* center container horizontally */
